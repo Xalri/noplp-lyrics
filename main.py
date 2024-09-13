@@ -10,32 +10,24 @@ import re
 
 
 def remove_ansi_escape_codes(text):
-    # Use regular expression to remove ANSI escape codes
     ansi_escape = re.compile(r'\x1b\[.*?m')
     return ansi_escape.sub('', text)
 
 def decode_escape_sequences(s):
-    # Use a regular expression to find \xNN hexadecimal sequences
     def replace_hex(match):
         hex_value = match.group(1)
-        return chr(int(hex_value, 16))  # Convert hex to its corresponding character
+        return chr(int(hex_value, 16)) 
     
-    # This pattern will match any \x followed by two hexadecimal digits
     return re.sub(r'\\x([0-9A-Fa-f]{2})', replace_hex, s)
 
 def capitalize_first_letter_inside_parentheses(text):
-    # This function will capitalize the first letter of each word inside parentheses
     def replacer(match):
-        # Extract the part inside parentheses
         inside_parentheses = match.group(1)
-        # Capitalize the first letter of each word
         capitalized = inside_parentheses.title()
-        return f"({capitalized})"  # Return the updated content inside parentheses
+        return f"({capitalized})"  
 
-    # Regular expression to find '(' followed by any characters until ')', capturing the content inside
     pattern = r'\(([^)]+)\)'
     
-    # Use re.sub to replace the matched patterns with the result of the replacer function
     result = re.sub(pattern, replacer, text)
     
     return result
@@ -44,55 +36,43 @@ def internet_connection():
     try:
         response = requests.get("https://youtube.com", timeout=2)
         return True
-    except requests.ConnectionError:
+    except requests.ConnectionError or requests.exceptions.ReadTimeout:
         return False  
     
 def underline_text_between_underscores(text):
     if text == "":
         return [{"text":text, "italic":False, "bold":False, "color":False}]
-    # Split the text by the '__' markers and determine which parts to underline
-    parts = re.split(r'(__)', text)  # Split into chunks by '__'
+    parts = re.split(r'(__)', text)  
     notShown = False
     if text.startswith(" #"):
         notShown = True
     
-    # Create a single row with text elements
     row = []
 
-    # INVENTED => ITALIC
+    # INVENTED => ORANGE
     # NORMAL => BOLD
     # NOT SHOWN => NORMAL
     
-    invented = False  # Track when to apply underlining
+    invented = False  
     
     for i in range(len(parts)):
         if parts[i] == '__':
-            invented = not invented  # Toggle underline on or off
+            invented = not invented 
         elif parts[i] == "":
             pass
         else:
-            # texte pas présente de base
             if notShown :
                 if i == 0:
 
-                    # Display the normal text
-                    # row.append(sg.Text(parts[i][2:], font=('Helvetica', 12, "italic"), pad=(0,0), size=(None, 1), expand_x=True))#
                     row.append({"text":parts[i][2:], "italic":True, "bold":False, "color":False})
                 else:
 
-                        # Display the normal text
-                        # row.append(sg.Text(parts[i], font=('Helvetica', 12, "italic"), pad=(0,0), size=(None, 1), expand_x=True))
                         row.append({"text":parts[i], "italic":True, "bold":False, "color":False})
-            # texte present de base
             else:
 
                 if invented:
-                    # Display the text with underline
-                    # row.append(sg.Text(parts[i], font=('Helvetica', 12, 'bold'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True))
                     row.append({"text":parts[i], "italic":False, "bold":True, "color":True})
                 else:
-                    # Display the normal text
-                    # row.append(sg.Text(parts[i], font=('Helvetica', 12, "bold"), pad=(0,0), size=(None, 1), expand_x=True))
                     row.append({"text":parts[i], "italic":False, "bold":True, "color":False})
     return row
 
@@ -204,7 +184,7 @@ def chunk_textt(text, chunk_size=5):
     indices = [i for i, c in enumerate(temp) if c == "/"]
     print(indices)
     s
-    return [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]  # Break lines into chunks
+    return [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]  
 
 def chunk_text(text, chunk_size=5):
     result = []
@@ -220,20 +200,37 @@ def chunk_text(text, chunk_size=5):
         if index == 0:
             notFound = chunk_size
             print("not found")
+            print("test2")
             while index == 0:
+                print("----")
+                print(len(text))
                 notFound += 1
-                for i in range(len(text)):
-                    print(text[i][0])
-                    if i == notFound:
-                        break
-                    if text[i][0]["text"] == " " and i > index:
-                        index = i
-                input()
+                if len(text) > 0:
+                    
+                    for i in range(len(text)):
+                        print(text[i][0])
+                        if 0 == len(text):
+                            print("text finish")
+                            index = i
+                            break
+
+                        # if i == notFound:
+                        #     break
+                        if text[i][0]["text"] == " " and i > index:
+                            index = int(i/2)
+                            break
+                    # input()
+                else:
+                    index = 999
+                    print(result)
         print("ok")
-        result.append([t[0] for t in text[:index]])
-        text = text[index+1:]
+        if text != 999:
+            result.append([t[0] for t in text[:index]])
+            text = text[index+1:]
     print('')
     for elem in result:
+        if len(elem) == 0:
+            result.remove(elem)
         pprint(elem)
         print("_______________________")
         
@@ -367,12 +364,13 @@ def createLyricWindow(lyrics):
             files = find(values[event] + '*.txt', './sings')
             window_search["-LOCAL SONG LIST-"].update(files)
 
-            if values[event][0].upper() < "m":
-                search = getSings(1)
-            else:
-                search = getSings(2)
-            results = [item for item in search if item.lower().startswith(values[event].lower())]
-            window_search["-ONLINE SONG LIST-"].update(results)
+            # if internet_connection() and False == True:
+            #     if values[event][0].upper() < "m":
+            #         search = getSings(1)
+            #     else:
+            #         search = getSings(2)
+            #     results = [item for item in search if item.lower().startswith(values[event].lower())]
+            #     window_search["-ONLINE SONG LIST-"].update(results)
         elif event == "-LOCAL SONG LIST-" and len(values[event]) > 0:
             with open('./sings/{filename}.txt'.format(filename=values[event][0]), 'r') as file:
                 # Read the entire content of the file
@@ -508,4 +506,3 @@ while True:
 
 
 # title = urllib.parse.quote(input("Titre : \n"))
-
