@@ -170,7 +170,7 @@ def find(pattern, path):
                 result.append(os.path.join(root, name).split("\\")[1].split(".txt")[0])
     return result
 
-#t
+#ttest
 def chunk_textt(text, chunk_size=5):
     nbChunk = int(len(text)/chunk_size)
     result = []
