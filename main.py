@@ -183,7 +183,7 @@ def chunk_textt(text, chunk_size=5):
     print(temp)
     indices = [i for i, c in enumerate(temp) if c == "/"]
     print(indices)
-    s
+    
     return [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]  
 
 def chunk_text(text, chunk_size=5):
