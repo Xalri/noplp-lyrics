@@ -6,7 +6,6 @@ import PySimpleGUI as sg
 import os, fnmatch
 import html
 import re
-# test
 
 
 
@@ -228,52 +227,57 @@ def chunk_text(text, chunk_size=5):
         if text != 999:
             result.append([t[0] for t in text[:index]])
             text = text[index+1:]
-    print('')
     for elem in result:
-        if len(elem) == 0:
-            result.remove(elem)
         pprint(elem)
         print("_______________________")
+
+    return result
         
 
 
-def update_lyrics_window(window, lyrics, chunk_index):
+def update_lyrics_window(window, lyrics, chunk_index, size):
     
-    nbChunk = len(chunk_text(lyrics, 20))
-    for i in range(int(len(lyrics)/nbChunk)):
-        print(i + int(((len(lyrics)/nbChunk) * chunk_index)))
-        print(len(lyrics))
-        line = lyrics[i + int(((len(lyrics)/nbChunk) * chunk_index))][0]
-        bold = line["bold"]
-        italic = line["italic"]
-        colored = line["color"]
-        text = line["text"]
+    for i in range(size):
+        currentChunk = lyrics[chunk_index]
+        if i+1 > len(currentChunk):
+            window["-LYR " + str(i) + "-"].update(" ")
+        else:
+            line = currentChunk[i]
+            bold = line["bold"]
+            italic = line["italic"]
+            colored = line["color"]
+            text = line["text"]
 
-        key = "-LYR " + str(i) + "-"
-        window[key].update(text)
-        # if italic:
-        #     if bold:
-        #         if colored:
-                    
-        #             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
-        #         else:
-        #             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
-        #     else:
-        #         if colored:
-        #             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
-        #         else:
-        #             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
-        # else:
-            # if bold:
-            #     if colored:
-            #         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
-            #     else:
-            #         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
-            # else:
-            #     if colored:
-            #         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
-            #     else:
-            #         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+            if italic:
+                if bold:
+                    if colored:
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange")
+                        # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                    else:
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'bold italic'))
+                        # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                else:
+                    if colored:
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'italic'), text_color="Orange")
+                        # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                    else:
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'italic'))
+                        # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+            else:
+                if bold:
+                    if colored:
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'bold'), text_color="Orange")
+                        # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                    else:
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'bold'))
+                        # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                else:
+                    if colored:
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12), text_color="Orange")
+                        # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                    else:
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12))
+                        # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
 def createLyricWindow(lyrics):
     SplitLyrics = lyrics.split("\n")
     lyrics_column = []
@@ -292,42 +296,49 @@ def createLyricWindow(lyrics):
     pprint(temp)
     print(len(temp))
     print("================================")
-    pprint(chunk_text(temp, 20))
-    d
+    chunkedLyrics = chunk_text(temp, 20)
+    
     nbChunk = len(chunk_text(temp, 20))
     # print(nbChunk)
     # print("--------------------------------")
     # pprint(chunk_text(temp, 20))
-    for i in range(int(len(temp)/nbChunk)):
+    current_chunk_index = 0
+    size = int(len(temp)/2)
+    for i in range(size):
         lyrics_column.append([])
-        line = temp[i][0]
-        bold = line["bold"]
-        italic = line["italic"]
-        colored = line["color"]
-        text = line["text"]
-
-        if italic:
-            if bold:
-                if colored:
-                    lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
-                else:
-                    lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
-            else:
-                if colored:
-                    lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
-                else:
-                    lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+        currentChunk = chunkedLyrics[current_chunk_index]
+        if i+1 > len(currentChunk):
+            lyrics_column[i].append(sg.Text(" "))
         else:
-            if bold:
-                if colored:
-                    lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+
+            line = currentChunk[i]
+            bold = line["bold"]
+            italic = line["italic"]
+            colored = line["color"]
+            text = line["text"]
+
+            if italic:
+                if bold:
+                    if colored:
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                    else:
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                 else:
-                    lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                    if colored:
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                    else:
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
             else:
-                if colored:
-                    lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                if bold:
+                    if colored:
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                    else:
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                 else:
-                    lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                    if colored:
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                    else:
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
     # pprint(chunkLyrics)
     # print(chunkLyrics)
     pprint(lyrics_column)
@@ -349,7 +360,7 @@ def createLyricWindow(lyrics):
 
         ]
     ]
-    current_chunk_index = 0
+    
 
     window_lyrics = sg.Window("Lyrics", lyrics_layout, location=(900,0), size=(1000,1280), finalize=True)
 
@@ -360,48 +371,10 @@ def createLyricWindow(lyrics):
         # presses the OK button
         if event == "OK" or event == sg.WIN_CLOSED:
             break
-        elif event == "-SONG-" and len(values[event]) > 0:
-            
-            files = find(values[event] + '*.txt', './sings')
-            window_search["-LOCAL SONG LIST-"].update(files)
-
-            # if internet_connection() and False == True:
-            #     if values[event][0].upper() < "m":
-            #         search = getSings(1)
-            #     else:
-            #         search = getSings(2)
-            #     results = [item for item in search if item.lower().startswith(values[event].lower())]
-            #     window_search["-ONLINE SONG LIST-"].update(results)
-        elif event == "-LOCAL SONG LIST-" and len(values[event]) > 0:
-            with open('./sings/{filename}.txt'.format(filename=values[event][0]), 'r') as file:
-                # Read the entire content of the file
-                content = file.read()
-            window_search["-LYRICS-"].update(content)
-            window_search["-NO SONG TEXT-"].update(visible=False)
-            window_search['-LYRICS COLUMN-'].update(visible=True)
-        elif event == "-ONLINE SONG LIST-" and len(values[event]) > 0 :
-            lyrics = getLyrics(values[event][0])
-            with open("./sings/{filename}.txt".format(filename=values[event][0]), 'w') as file:
-                # Write content to the file
-                file.write(lyrics)
-
-            lyrSplit = lyrics.split('\n')
-            lay = [[sg.Text("test")]]
-            for i in range(len(lyrics.split("\n"))):
-                if lyrSplit[i].startswith('#'):
-                    # Add a gray-colored text element for lines starting with '#'
-                    lay.append(sg.Text(lyrSplit[i], text_color='gray'))
-                else:
-                    # Add a normal text element for other lines
-                    lay.append(sg.Text(lyrSplit[i]))
-            # window_search["-LYRICS-"].update(lyrics)
-            # print(lay)
-            window_search.close()
-            createLyricWindow(lyrics)
-        elif event == "-NEXT-":
+        if event == "-NEXT-":
             current_chunk_index += 1
             print(current_chunk_index)
-            update_lyrics_window(window_lyrics, temp, current_chunk_index)
+            update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
             
             # Disable "Next" button if we're at the last chunk
             if current_chunk_index == len(lyrics_column) - 1:
@@ -411,7 +384,7 @@ def createLyricWindow(lyrics):
             window_lyrics['-PREV-'].update(disabled=False)
         elif event == "-PREV-":
             current_chunk_index -= 1
-            update_lyrics_window(window_lyrics, temp, current_chunk_index)
+            update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
             
             # Disable "Previous" button if we're at the first chunk
             if current_chunk_index == 0:
@@ -472,7 +445,8 @@ while True:
         files = find(values[event] + '*.txt', './sings')
         window_search["-LOCAL SONG LIST-"].update(files)
 
-        if internet_connection():
+        if 1 == 2:
+        # if internet_connection()
             if values[event][0].upper() < "m":
                 search = getSings(1)
             else:
