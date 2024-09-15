@@ -241,8 +241,10 @@ def update_lyrics_window(window, lyrics, chunk_index, size):
     for i in range(size):
         currentChunk = lyrics[chunk_index]
         if i+1 > len(currentChunk):
+            print("false " + str(i))
             window["-LYR " + str(i) + "-"].update(" ")
         else:
+            print(i)
             line = currentChunk[i]
             bold = line["bold"]
             italic = line["italic"]
@@ -308,8 +310,8 @@ def createLyricWindow(lyrics):
     for i in range(size):
         lyrics_column.append([])
         currentChunk = chunkedLyrics[current_chunk_index]
-        if i+1 > len(currentChunk):
-            lyrics_column[i].append(sg.Text(" "))
+        if i >= len(currentChunk) -1:
+            lyrics_column[i].append(sg.Text("‎"))
         else:
 
             line = currentChunk[i]
@@ -342,7 +344,9 @@ def createLyricWindow(lyrics):
                         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
     # pprint(chunkLyrics)
     # print(chunkLyrics)
-    pprint(lyrics_column)
+    pprint(chunkedLyrics[current_chunk_index])
+    pprint(len(chunkedLyrics[current_chunk_index]))
+    pprint(len(lyrics_column))
     # print(lyrics_column)
 
     infos_column = [
@@ -364,7 +368,7 @@ def createLyricWindow(lyrics):
     
 
     window_lyrics = sg.Window("Lyrics", lyrics_layout, location=(900,0), size=(1000,1280), finalize=True)
-
+    pprint(window_lyrics.element_list())
     while True:
         event, values = window_lyrics.read()
         print(event)
