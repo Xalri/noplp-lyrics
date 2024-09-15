@@ -10,10 +10,12 @@ import tkinter as tk
 from tkinter import Canvas, Listbox
 
 BACKGROUND_COLOR = '#2a2a2a'
-TEXT_COLOR = '#c3bfcd'
+TEXT_COLOR = '#ffffff'
 INPUT_BACKGROUND = '#181818'
-MULTILINE_BACKGROUND = '#303030'
+MULTILINE_BACKGROUND = '#494949'
 SCROLLBAR_COLOR = '#3E4451'
+OPTION_COLOR = "#cecece"
+
 
 def remove_ansi_escape_codes(text):
     ansi_escape = re.compile(r'\x1b\[.*?m')
@@ -240,10 +242,14 @@ def chunk_text(text, chunk_size=5):
         if text != 999:
             result.append([t[0] for t in text[:index]])
             text = text[index+1:]
+    
+    removed = 0
     for i in range(len(result)):
         if result[i] == []:
-            result.pop(i)
+            removed += 1
             i = i -1
+    for _ in range(removed):
+        result.remove([])
     for elem in result:
         pprint(elem)
         print("_______________________")
@@ -271,14 +277,14 @@ def update_lyrics_window(window, lyrics, chunk_index, size):
                         window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange")
                         # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
-                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'bold italic'))
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'bold italic'), text_color=OPTION_COLOR)
                         # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                 else:
                     if colored:
                         window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'italic'), text_color="Orange")
                         # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
-                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'italic'))
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'italic'), text_color=OPTION_COLOR)
                         # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
             else:
                 if bold:
@@ -286,14 +292,14 @@ def update_lyrics_window(window, lyrics, chunk_index, size):
                         window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'bold'), text_color="Orange")
                         # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
-                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'bold'))
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12, 'bold'), text_color=OPTION_COLOR)
                         # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                 else:
                     if colored:
                         window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12), text_color="Orange")
                         # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
-                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12))
+                        window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12), text_color=OPTION_COLOR)
                         # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
 def createLyricWindow(lyrics):
     SplitLyrics = lyrics.split("\n")
@@ -325,7 +331,7 @@ def createLyricWindow(lyrics):
         lyrics_column.append([])
         currentChunk = chunkedLyrics[current_chunk_index]
         if i >= len(currentChunk) -1:
-            lyrics_column[i].append(sg.Text("‎", key="-LYR " + str(i) + "-"))
+            lyrics_column[i].append(sg.Text("‎", key="-LYR " + str(i) + "-", background_color=BACKGROUND_COLOR))
         else:
 
             line = currentChunk[i]
@@ -337,25 +343,25 @@ def createLyricWindow(lyrics):
             if italic:
                 if bold:
                     if colored:
-                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
-                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                 else:
                     if colored:
-                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
-                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
             else:
                 if bold:
                     if colored:
-                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
-                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                 else:
                     if colored:
-                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
-                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+                        lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
     # pprint(chunkLyrics)
     # print(chunkLyrics)
     pprint(chunkedLyrics[current_chunk_index])
@@ -364,27 +370,41 @@ def createLyricWindow(lyrics):
     # print(lyrics_column)
 
     infos_column = [
-        [sg.Text("Légende:", font=('Helvetica', 12, "underline"))],
-        [sg.Text("gras -> texte montré à l'écran ", font=('Helvetica', 12, 'bold'))],
-        [sg.Text("italic -> texte pas montré à l'écran mais présent dans la version du chanteur", font=('Helvetica', 12, "italic"))],
-        [sg.Text("orange -> texte de NOPLP n'existant pas dans la version du chanteur ", font=('Helvetica', 12, "bold"), text_color="Orange")],
-        [sg.Text(" ")],
-        [sg.Button("Previous", key="-PREV-", disabled=True), sg.Button("Next", key="-NEXT-")],
+        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None, 8))],
+        [sg.Text("Légende:", font=('Helvetica', 10, "underline"), background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("gras", font=('Helvetica', 10, 'bold'), background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("texte montré à l'écran ", font=('Helvetica', 10, 'bold'), background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("italic", font=('Helvetica', 10, "italic"), background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("texte pas montré à l'écran mais présent dans la version du chanteur", font=('Helvetica', 10, "italic"), background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("orange", font=('Helvetica', 10, "bold"), text_color="Orange", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("texte de NOPLP n'existant pas dans la version du chanteur ", font=('Helvetica', 10, "bold"), text_color="Orange", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Button("Previous", key="-PREV-", disabled=True, size=(None,1)), sg.Button("Next", key="-NEXT-", size=(None,1))],
+        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None, 13))],
+    ]
+
+    button_info_column = [
+        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None, 8))],
+        [sg.Button("Légendre", font=('Helvetica', 10, "underline"), key="-LEGEND-")]
     ]
 
     lyrics_layout = [
         [
-            sg.Column(lyrics_column, key="-LYRICS-"),
-            sg.Column(infos_column, key="-INFOS-"),
+            sg.Column(lyrics_column, key="-LYRICS-", background_color="black", size=(400, 600)),
+            sg.Column(button_info_column, key="-INFOS-", background_color=BACKGROUND_COLOR, size=(400, 600)),
 
         ]
     ]
     
 
-    window_lyrics = sg.Window("Lyrics", lyrics_layout, location=(900,0), size=(1000,1280), finalize=True)
+    window_lyrics = sg.Window("Lyrics", lyrics_layout, location=(900,0), size=(800,600), finalize=True, background_color=BACKGROUND_COLOR)
     pprint(window_lyrics.element_list())
     pprint(window_lyrics.AllKeysDict)
     pprint(chunkedLyrics)
+    print(window_lyrics["-INFOS-"].get_size())
     while True:
         event, values = window_lyrics.read()
         print(event)
@@ -392,7 +412,7 @@ def createLyricWindow(lyrics):
         # presses the OK button
         if event == "OK" or event == sg.WIN_CLOSED:
             break
-        if event == "-NEXT-":
+        elif event == "-NEXT-":
             current_chunk_index += 1
             print(current_chunk_index)
             print(len(chunkedLyrics))
@@ -415,7 +435,8 @@ def createLyricWindow(lyrics):
             
             # Enable "Next" button
             window_lyrics['-NEXT-'].update(disabled=False)
-
+        elif event == "-LEGEND-":
+            popup = sg.Window(infos_column, resizable=False, no_titlebar=True)
 
 
 
@@ -423,21 +444,21 @@ def createLyricWindow(lyrics):
 search_layout = [
     [
         sg.Push(background_color=BACKGROUND_COLOR),
-        sg.Text("Song Searcher", font=('Verdana', 17, "bold"), text_color="#e6e6e6", background_color=BACKGROUND_COLOR),
+        sg.Text("Song Searcher", font=('Verdana', 17, "bold"), text_color="#fdfdfd", background_color=BACKGROUND_COLOR),
         sg.Push(background_color=BACKGROUND_COLOR),
     ],
     [
         sg.Push(background_color=BACKGROUND_COLOR),
-        sg.In(size=(25, 1), enable_events=True, key="-SONG-", background_color=INPUT_BACKGROUND, text_color="#bcafbf"),
+        sg.In(size=(25, 1), enable_events=True, key="-SONG-", background_color=INPUT_BACKGROUND, text_color="#bcafbf", border_width=0),
         sg.Push(background_color=BACKGROUND_COLOR),
     ],
-    [sg.Push(background_color=BACKGROUND_COLOR), sg.Text("Downloaded song", text_color=TEXT_COLOR, background_color=BACKGROUND_COLOR), sg.Push(background_color=BACKGROUND_COLOR),],
+    [sg.Push(background_color=BACKGROUND_COLOR), sg.Text("Downloaded song", font=("Helvetica", 14), text_color=TEXT_COLOR, background_color=BACKGROUND_COLOR), sg.Push(background_color=BACKGROUND_COLOR),],
     [
         sg.Canvas(key="-CANVAS-", size=(272, 149), background_color=MULTILINE_BACKGROUND),
         # sg.Canvas(key="-CANVAS-", size=(100, 50), background_color=MULTILINE_BACKGROUND),
         
     ],
-    [sg.Push(background_color=BACKGROUND_COLOR), sg.Text("Online song", text_color=TEXT_COLOR, background_color=BACKGROUND_COLOR), sg.Push(background_color=BACKGROUND_COLOR),],
+    [sg.Push(background_color=BACKGROUND_COLOR), sg.Text("Online song", font=("Helvetica", 14), text_color=TEXT_COLOR, background_color=BACKGROUND_COLOR), sg.Push(background_color=BACKGROUND_COLOR),],
     [
         
         sg.Canvas(key="-CANVAS2-", size=(272, 149), background_color=MULTILINE_BACKGROUND),
@@ -474,7 +495,7 @@ canvas.pack(fill='both', expand=False)
 round_rectangle(canvas, 0, 0, 292, 149, radius=25, fill=MULTILINE_BACKGROUND)
 
 # Create a Tkinter Listbox and place it inside the rounded rectangle
-listbox = Listbox(canvas, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12))
+listbox = Listbox(canvas, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12), fg=OPTION_COLOR)
 listbox.place(x=10, y=10, width=222, height=119)  # Adjust dimensions based on your layout
 
 
@@ -505,7 +526,7 @@ canvas2.pack(fill='both', expand=False)
 round_rectangle(canvas2, 0, 0, 292, 149, radius=25, fill=MULTILINE_BACKGROUND)
 
 # Create a Tkinter Listbox and place it inside the rounded rectangle
-listbox2 = Listbox(canvas2, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12))
+listbox2 = Listbox(canvas2, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12), fg=OPTION_COLOR)
 listbox2.place(x=10, y=10, width=222, height=119)  # Adjust dimensions based on your layout
 
 
@@ -562,6 +583,7 @@ while True:
         with open('./sings/{filename}.txt'.format(filename=values[event][0]), 'r') as file:
             # Read the entire content of the file
             content = file.read()
+            print(content)
         # window_search.close()
         createLyricWindow(content)
     elif len(values[event]) > 0 and event == "-ONLINE SONG LIST-":
