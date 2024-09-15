@@ -6,7 +6,6 @@ import PySimpleGUI as sg
 import os, fnmatch
 import html
 import re
-# test
 
 
 def remove_ansi_escape_codes(text):
