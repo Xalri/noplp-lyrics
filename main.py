@@ -301,6 +301,43 @@ def update_lyrics_window(window, lyrics, chunk_index, size):
                     else:
                         window["-LYR " + str(i) + "-"].update(text, font=('Helvetica', 12), text_color=OPTION_COLOR)
                         # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
+
+def legendWindow():
+    
+    infos_column = [
+        [sg.Titlebar("Légende", icon="", background_color="#626161", text_color="#fdfdfd")],
+        [sg.Column([
+        [sg.Text("gras", font=('Helvetica', 11, 'bold'), background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("texte montré à l'écran ", font=('Helvetica', 10, 'bold'), background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("italic", font=('Helvetica', 11, "italic"), background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("texte pas montré à l'écran mais présent dans la version du chanteur", font=('Helvetica', 10, "italic"), background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("orange", font=('Helvetica', 11, "bold"), text_color="Orange", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text("texte de NOPLP n'existant pas dans la version du chanteur ", font=('Helvetica', 10, "bold"), text_color="Orange", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
+        [sg.Button("Retour", font=('Helvetica', 10, "bold"), key="-RETURN-", size=(30, 1), border_width=0, button_color=("#878787", "#1b1b1b"))],
+        
+    ], background_color=BACKGROUND_COLOR, size=(None, None), element_justification='center', expand_x=True, expand_y=True, pad=0)]]
+
+    popup = sg.Window("Légende", infos_column, background_color=BACKGROUND_COLOR, finalize=True, no_titlebar=True, grab_anywhere=True, element_padding=0)
+
+
+
+
+
+    print(popup.get_scaling())
+    print(popup.get_screen_dimensions())
+    print(popup.get_screen_size())
+
+    while True:
+        event, values = popup.read()
+        if event == sg.WIN_CLOSED:
+            break
+        elif event == "-RETURN-":
+            return popup.close()
+            
+
 def createLyricWindow(lyrics):
     SplitLyrics = lyrics.split("\n")
     lyrics_column = []
@@ -326,7 +363,7 @@ def createLyricWindow(lyrics):
     # print("--------------------------------")
     # pprint(chunk_text(temp, 20))
     current_chunk_index = 0
-    size = int(len(temp)/2)
+    size = 22
     for i in range(size):
         lyrics_column.append([])
         currentChunk = chunkedLyrics[current_chunk_index]
@@ -367,34 +404,13 @@ def createLyricWindow(lyrics):
     pprint(chunkedLyrics[current_chunk_index])
     pprint(len(chunkedLyrics[current_chunk_index]))
     pprint(len(lyrics_column))
+    lyrics_column.append([sg.Button("previous", font=('Helvetica', 10, "bold"), key="-PREV-", size=(None, 1), border_width=0, button_color=("#878787", "#1b1b1b")), sg.Button("Légende", font=('Helvetica', 10, "bold"), key="-LEGEND-", size=(9, 1), border_width=0, button_color=("#878787", "#1b1b1b")), sg.Button("Next", font=('Helvetica', 10, "bold"), key="-NEXT-", size=(None, 1), border_width=0, button_color=("#878787", "#1b1b1b"))])
     # print(lyrics_column)
 
-    infos_column = [
-        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None, 8))],
-        [sg.Text("Légende:", font=('Helvetica', 10, "underline"), background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Text("gras", font=('Helvetica', 10, 'bold'), background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Text("texte montré à l'écran ", font=('Helvetica', 10, 'bold'), background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Text("italic", font=('Helvetica', 10, "italic"), background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Text("texte pas montré à l'écran mais présent dans la version du chanteur", font=('Helvetica', 10, "italic"), background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Text("orange", font=('Helvetica', 10, "bold"), text_color="Orange", background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Text("texte de NOPLP n'existant pas dans la version du chanteur ", font=('Helvetica', 10, "bold"), text_color="Orange", background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Button("Previous", key="-PREV-", disabled=True, size=(None,1)), sg.Button("Next", key="-NEXT-", size=(None,1))],
-        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None, 13))],
-    ]
-
-    button_info_column = [
-        [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None, 8))],
-        [sg.Button("Légendre", font=('Helvetica', 10, "underline"), key="-LEGEND-")]
-    ]
 
     lyrics_layout = [
         [
-            sg.Column(lyrics_column, key="-LYRICS-", background_color="black", size=(400, 600)),
-            sg.Column(button_info_column, key="-INFOS-", background_color=BACKGROUND_COLOR, size=(400, 600)),
+            sg.Column(lyrics_column, key="-LYRICS-", background_color=BACKGROUND_COLOR, size=(None, None), justification="center", element_justification="center", expand_y=True, expand_x=True),
 
         ]
     ]
@@ -404,9 +420,9 @@ def createLyricWindow(lyrics):
     pprint(window_lyrics.element_list())
     pprint(window_lyrics.AllKeysDict)
     pprint(chunkedLyrics)
-    print(window_lyrics["-INFOS-"].get_size())
     while True:
         event, values = window_lyrics.read()
+        
         print(event)
         # End program if user closes window_search or
         # presses the OK button
@@ -436,8 +452,8 @@ def createLyricWindow(lyrics):
             # Enable "Next" button
             window_lyrics['-NEXT-'].update(disabled=False)
         elif event == "-LEGEND-":
-            popup = sg.Window(infos_column, resizable=False, no_titlebar=True)
-
+            legendWindow()
+        
 
 
 
@@ -544,7 +560,9 @@ def update_listbox2(new_values):
 # Bind the listbox selection to the event handler
 listbox2.bind('<<ListboxSelect>>', on_select2)
 
-
+files = find('*.txt', './sings')
+# window_search.write_event_value('-LOCAL SONG LIST-', files)
+update_listbox(files)
 
 
 
