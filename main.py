@@ -6,7 +6,14 @@ import PySimpleGUI as sg
 import os, fnmatch
 import html
 import re
+import tkinter as tk
+from tkinter import Canvas, Listbox
 
+BACKGROUND_COLOR = '#2a2a2a'
+TEXT_COLOR = '#c3bfcd'
+INPUT_BACKGROUND = '#181818'
+MULTILINE_BACKGROUND = '#303030'
+SCROLLBAR_COLOR = '#3E4451'
 
 def remove_ansi_escape_codes(text):
     ansi_escape = re.compile(r'\x1b\[.*?m')
@@ -18,6 +25,29 @@ def decode_escape_sequences(s):
         return chr(int(hex_value, 16)) 
     
     return re.sub(r'\\x([0-9A-Fa-f]{2})', replace_hex, s)
+
+def round_rectangle(canvas, x1, y1, x2, y2, radius=25, **kwargs):
+    points = [x1+radius, y1,
+              x1+radius, y1,
+              x2-radius, y1,
+              x2-radius, y1,
+              x2, y1,
+              x2, y1+radius,
+              x2, y1+radius,
+              x2, y2-radius,
+              x2, y2-radius,
+              x2, y2,
+              x2-radius, y2,
+              x2-radius, y2,
+              x1+radius, y2,
+              x1+radius, y2,
+              x1, y2,
+              x1, y2-radius,
+              x1, y2-radius,
+              x1, y1+radius,
+              x1, y1+radius,
+              x1, y1]
+    return canvas.create_polygon(points, **kwargs, smooth=True)
 
 def capitalize_first_letter_inside_parentheses(text):
     def replacer(match):
@@ -169,23 +199,6 @@ def find(pattern, path):
                 result.append(os.path.join(root, name).split("\\")[1].split(".txt")[0])
     return result
 
-#ttest
-def chunk_textt(text, chunk_size=5):
-    nbChunk = int(len(text)/chunk_size)
-    result = []
-    pprint(text[0][0]["text"])
-    # temp = "".join([(t[0]["text"] + "\n") for t in text[:chunk_size]])
-    temp = ""
-    for i, t in enumerate(text[:chunk_size]):
-        temp += t[0]["text"]
-        if i < len(text[:chunk_size]) - 1:
-            temp += f"\n/\n"
-    print(temp)
-    indices = [i for i, c in enumerate(temp) if c == "/"]
-    print(indices)
-    
-    return [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]  
-
 def chunk_text(text, chunk_size=5):
     result = []
 
@@ -227,14 +240,16 @@ def chunk_text(text, chunk_size=5):
         if text != 999:
             result.append([t[0] for t in text[:index]])
             text = text[index+1:]
+    for i in range(len(result)):
+        if result[i] == []:
+            result.pop(i)
+            i = i -1
     for elem in result:
         pprint(elem)
         print("_______________________")
 
     return result
         
-
-
 def update_lyrics_window(window, lyrics, chunk_index, size):
     
     for i in range(size):
@@ -310,7 +325,7 @@ def createLyricWindow(lyrics):
         lyrics_column.append([])
         currentChunk = chunkedLyrics[current_chunk_index]
         if i >= len(currentChunk) -1:
-            lyrics_column[i].append(sg.Text("‎"))
+            lyrics_column[i].append(sg.Text("‎", key="-LYR " + str(i) + "-"))
         else:
 
             line = currentChunk[i]
@@ -368,6 +383,8 @@ def createLyricWindow(lyrics):
 
     window_lyrics = sg.Window("Lyrics", lyrics_layout, location=(900,0), size=(1000,1280), finalize=True)
     pprint(window_lyrics.element_list())
+    pprint(window_lyrics.AllKeysDict)
+    pprint(chunkedLyrics)
     while True:
         event, values = window_lyrics.read()
         print(event)
@@ -378,10 +395,12 @@ def createLyricWindow(lyrics):
         if event == "-NEXT-":
             current_chunk_index += 1
             print(current_chunk_index)
+            print(len(chunkedLyrics))
+            print("--------------------------------")
             update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
             
             # Disable "Next" button if we're at the last chunk
-            if current_chunk_index == len(lyrics_column) - 1:
+            if current_chunk_index == len(chunkedLyrics) - 1:
                 window_lyrics['-NEXT-'].update(disabled=True)
             
             # Enable "Previous" button
@@ -403,38 +422,112 @@ def createLyricWindow(lyrics):
 
 search_layout = [
     [
-        sg.Text("Song Searcher"),
-        sg.In(size=(25, 1), enable_events=True, key="-SONG-")
+        sg.Push(background_color=BACKGROUND_COLOR),
+        sg.Text("Song Searcher", font=('Verdana', 17, "bold"), text_color="#e6e6e6", background_color=BACKGROUND_COLOR),
+        sg.Push(background_color=BACKGROUND_COLOR),
     ],
-    [sg.Text("Downloaded song"),],
+    [
+        sg.Push(background_color=BACKGROUND_COLOR),
+        sg.In(size=(25, 1), enable_events=True, key="-SONG-", background_color=INPUT_BACKGROUND, text_color="#bcafbf"),
+        sg.Push(background_color=BACKGROUND_COLOR),
+    ],
+    [sg.Push(background_color=BACKGROUND_COLOR), sg.Text("Downloaded song", text_color=TEXT_COLOR, background_color=BACKGROUND_COLOR), sg.Push(background_color=BACKGROUND_COLOR),],
+    [
+        sg.Canvas(key="-CANVAS-", size=(272, 149), background_color=MULTILINE_BACKGROUND),
+        # sg.Canvas(key="-CANVAS-", size=(100, 50), background_color=MULTILINE_BACKGROUND),
+        
+    ],
+    [sg.Push(background_color=BACKGROUND_COLOR), sg.Text("Online song", text_color=TEXT_COLOR, background_color=BACKGROUND_COLOR), sg.Push(background_color=BACKGROUND_COLOR),],
     [
         
-        sg.Listbox(
-            values=[], enable_events=True, size=(40, 10), key="-LOCAL SONG LIST-"
-        )
-    ],
-    [sg.Text("Online song"),],
-    [
-        
-        sg.Listbox(
-            values=[], enable_events=True, size=(40, 10), key="-ONLINE SONG LIST-"
-        )
+        sg.Canvas(key="-CANVAS2-", size=(272, 149), background_color=MULTILINE_BACKGROUND),
     ],
 ]
 
-lyrics_viewer_column = [
-    [sg.Text("Choose an song from list on left:", key="-NO SONG TEXT-", )],
-]
 
-layout = [
-    [
-        sg.Column(search_layout),
 
-    ]
-]
+# layout = [
+#     [
+#         sg.Column(search_layout, size=(322, 476)),
+
+#     ]
+# ]
+
+# sg.theme_background_color(BACKGROUND_COLOR)
 
 # Create the window
-window_search = sg.Window("NOPLP lyrics", layout)
+window_search = sg.Window("NOPLP lyrics", search_layout, finalize=True, size=(322, 476), background_color=BACKGROUND_COLOR)
+print(window_search.AllKeysDict)
+
+
+
+
+
+############################################### LISTBOX LOCAL 
+# Access the Tkinter canvas through PySimpleGUI
+canvas_elem = window_search['-CANVAS-'].TKCanvas
+# canvas = Canvas(canvas_elem, highlightthickness=0, bg='#64778d')
+canvas = Canvas(canvas_elem, height=149, highlightthickness=0, bg=BACKGROUND_COLOR)
+canvas.pack(fill='both', expand=False)
+
+# Draw rounded rectangle for the listbox
+round_rectangle(canvas, 0, 0, 292, 149, radius=25, fill=MULTILINE_BACKGROUND)
+
+# Create a Tkinter Listbox and place it inside the rounded rectangle
+listbox = Listbox(canvas, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12))
+listbox.place(x=10, y=10, width=222, height=119)  # Adjust dimensions based on your layout
+
+
+# Function to simulate PySimpleGUI's event system using the "-LOCAL SONG LIST-" key
+def on_select(event):
+    selected_indices = listbox.curselection()  # Get selected items
+    selected_songs = [listbox.get(i) for i in selected_indices]  # Get values of selected items
+    # Send event to PySimpleGUI
+    window_search.write_event_value('-LOCAL SONG LIST-', selected_songs)
+
+def update_listbox(new_values):
+    listbox.delete(0, tk.END)  # Clear current items
+    for item in new_values:
+        listbox.insert(tk.END, item)  # Insert new items
+# Bind the listbox selection to the event handler
+listbox.bind('<<ListboxSelect>>', on_select)
+
+
+
+############################################### LISTBOX ONLINE 
+# Access the Tkinter canvas through PySimpleGUI
+canvas_elem2 = window_search['-CANVAS2-'].TKCanvas
+# canvas = Canvas(canvas_elem, highlightthickness=0, bg='#64778d')
+canvas2 = Canvas(canvas_elem2, height=149, highlightthickness=0, bg=BACKGROUND_COLOR)
+canvas2.pack(fill='both', expand=False)
+
+# Draw rounded rectangle for the listbox
+round_rectangle(canvas2, 0, 0, 292, 149, radius=25, fill=MULTILINE_BACKGROUND)
+
+# Create a Tkinter Listbox and place it inside the rounded rectangle
+listbox2 = Listbox(canvas2, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12))
+listbox2.place(x=10, y=10, width=222, height=119)  # Adjust dimensions based on your layout
+
+
+# Function to simulate PySimpleGUI's event system using the "-LOCAL SONG LIST-" key
+def on_select2(event):
+    selected_indices = listbox2.curselection()  # Get selected items
+    selected_songs = [listbox2.get(i) for i in selected_indices]  # Get values of selected items
+    # Send event to PySimpleGUI
+    window_search.write_event_value('-ONLINE SONG LIST-', selected_songs)
+
+def update_listbox2(new_values):
+    listbox2.delete(0, tk.END)  # Clear current items
+    for item in new_values:
+        listbox2.insert(tk.END, item)  # Insert new items
+# Bind the listbox selection to the event handler
+listbox2.bind('<<ListboxSelect>>', on_select2)
+
+
+
+
+
+
 
 # Create an event loop
 while True:
@@ -447,10 +540,11 @@ while True:
     elif len(values[event]) > 0 and event == "-SONG-":
         
         files = find(values[event] + '*.txt', './sings')
-        window_search["-LOCAL SONG LIST-"].update(files)
+        # window_search.write_event_value('-LOCAL SONG LIST-', files)
+        update_listbox(files)
 
-        if 1 == 2:
-        # if internet_connection()
+        # if 1 == 2:
+        if internet_connection():
             if values[event][0].upper() < "m":
                 search = getSings(1)
             else:
@@ -462,7 +556,8 @@ while True:
                 if song in files:
                     # print(song)
                     results.remove(song)
-            window_search["-ONLINE SONG LIST-"].update(results)
+            # window_search["-ONLINE SONG LIST-"].update(results)
+            update_listbox2(results)
     elif len(values[event]) > 0 and event == "-LOCAL SONG LIST-":
         with open('./sings/{filename}.txt'.format(filename=values[event][0]), 'r') as file:
             # Read the entire content of the file
