@@ -9,7 +9,6 @@ import re
 import tkinter as tk
 from tkinter import Canvas, Listbox
 
-#test
 
 BACKGROUND_COLOR = '#2a2a2a'
 TEXT_COLOR = '#ffffff'
