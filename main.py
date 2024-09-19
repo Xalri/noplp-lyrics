@@ -34,6 +34,7 @@ def resource_path(relative_path):
 
 sings_dir = resource_path('sings').replace("\\", "/")
 
+
 # sings_dir = "C:/Users/samyt/AppData/Local/Temp/_MMMM/sings"
 # sings_dir = "C:\\Users\\samyt\\AppData\\Local\\Temp\\_MMMM\\sings".replace("\\", "/")
 
