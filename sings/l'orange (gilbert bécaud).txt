@@ -1,0 +1,81 @@
+
+ 
+ x 2
+ Tu as volé, as volé, as volé, as volé, as volé, as volé l'orange
+ Tu as volé, as volé, as volé, l'orange du marchand non
+ 
+ Vous êtes fous
+ C'est pas moi
+ J'ai pas volé l'orange
+ J'ai trop peur des voleurs
+ J'ai pas pris l'orange du marchand 
+ 
+ Oui ça ne peut être que toi
+ Tu es méchant et laid
+ Y avait comme du sang sur tes doigts
+ Quand l'orange coulait
+ Non   x 4 
+ 
+ Oui c'est bien toi qui l'as volée
+ Avec tes mains crochues
+ Vous êtes fous dites
+ Oui c'est bien toi qui l'as volée
+ Y a quelqu'un qui t'a vu
+ Vous vous trompez
+ Je courais dans la montagne
+ Regardant tout le temps
+ Les étoiles dans les yeux
+ Vous vous trompez
+ Je cherchais dans la montagne
+ L'oiseau bleu 
+ 
+ #Tu as volé, as volé, as volé, as volé, as volé, as volé l'orange
+ #Mais non, mais non non non
+ #Tu as volé, as volé, as volé l'orange du marchand
+ #Non non non 
+ 
+ #Vous êtes fous
+ #C'est pas moi
+ #J'ai pas volé, pas volé l'orange
+ #J'ai trop peur des voleurs
+ #J'ai pas pris l'orange du marchand
+ #Non 
+ 
+ #Y avait longtemps qu'on te guettait avec tes dents de loup
+ #Y avait longtemps qu'on te guettait, t'auras la corde au cou
+ #Vous êtes fous non
+ #Pour toi ce jour, c'est le dernier
+ #Non 
+ #Tu n'es qu'un sale voleur
+ #J'ai rien fait non 
+ 
+ #D'abord tu n'es qu'un étranger
+ #Et tu portes malheur
+ #Vous vous trompez
+ #Je courais dans la montagne
+ #Regardant tout le temps
+ #Les étoiles dans les yeux
+ #Vous vous trompez 
+ #Je cherchais dans la montagne
+ #L'oiseau bleu 
+ 
+ #Pas volé   x 6
+ #L'orange
+ #Il a volé l'orange
+ #J'ai pas volé, pas volé, pas volé l'orange du marchand non non non  
+ #J'ai pas volé, pas volé, pas volé, pas volé, pas volé, pas volé l'orange
+ #Laissez-moi
+ #Tu la vois
+ #J'ai rien fait
+ #La corde qui te pendra 
+ #Vous êtes fous non
+ #La corde qui te pendra x 3
+ #Vous êtes fous
+ #Vous êtes fous, laissez-moi   
+ #La corde qui te prendra
+ #Laissez-moi
+ #Laissez-moi
+ #La corde qui te pendra
+ #Vous êtes fous
+ #La corde qui te pendra
+ 

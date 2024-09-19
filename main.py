@@ -8,7 +8,13 @@ import html
 import re
 import tkinter as tk
 from tkinter import Canvas, Listbox
+from time import sleep
+import pyperclip
+import pyautogui
+import sys
 
+
+# Example usage to get the path to a file in the 'sings' directory
 
 BACKGROUND_COLOR = '#2a2a2a'
 TEXT_COLOR = '#ffffff'
@@ -17,6 +23,18 @@ MULTILINE_BACKGROUND = '#494949'
 SCROLLBAR_COLOR = '#3E4451'
 OPTION_COLOR = "#cecece"
 
+def resource_path(relative_path):
+    """ Get the absolute path to the resource, works for dev and for PyInstaller """
+    if getattr(sys, 'frozen', False):
+        base_path = sys._MEIPASS  # Temporary folder for PyInstaller
+    else:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+sings_dir = resource_path('sings')
+
+print(sings_dir)
 
 def remove_ansi_escape_codes(text):
     ansi_escape = re.compile(r'\x1b\[.*?m')
@@ -110,10 +128,33 @@ def underline_text_between_underscores(text):
         row = [{'text': ' ', 'italic': False, 'bold': False, 'color': False}]
     return row
 
-def getLyrics(title):
+def upper_after_apostrophe(s):
+    result = []
+    capitalize_next = False
+    
+    for i in range(len(s)):
+        char = s[i]
+        if capitalize_next and char.isalpha():
+            result.append(char.upper())
+            capitalize_next = False
+        else:
+            capitalize_next = False
+            result.append(char)
+        
+        if char == "'":
+            capitalize_next = True
 
-    chanson = capitalize_first_letter_inside_parentheses(title.replace(" ", "_")[0].upper() + title.replace(" ", "_")[1:])
+    return s
+    return ''.join(result)
+
+def getLyrics(title):
+    global lien
+    global titre
+    chanson = upper_after_apostrophe(capitalize_first_letter_inside_parentheses(title.replace(" ", "_")[0].upper() + title.replace(" ", "_").replace("?", "%3F")[1:]))
+    titre = chanson
     url = "https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/" + chanson
+    lien = url
+    print(url)
     # print("------")
     # print("Url : " + url)
 
@@ -124,6 +165,50 @@ def getLyrics(title):
 </p>
 <h2><span class="mw-headline" id="Dates_de_sortie">Dates de sortie</span>""")[0].replace("</b>","").replace("<b>","").replace("</p>","").replace("<p>","").replace("<br />","").replace("</i>",Style.RESET_ALL).replace("<i>","#").replace("(", "\x1B[3m" + Style.DIM).replace(")", Style.RESET_ALL).replace('<span style="color:#E67E30">', "__").replace("</span>", "__")
 
+    parolesSplit = paroles.split("\n")
+
+
+
+    for i in range(len(parolesSplit)):
+        for j in range(10):
+            if "(x {number})".format(number=j) in parolesSplit[i]:
+                if not "[(x {number})".format(number=j) in parolesSplit[i]:
+
+                    for k in range(j+1):
+
+                        parolesSplit.insert(i+1, str(j-k+1) + "x " + parolesSplit[i].split("(x {number})".format(number=j))[0])  
+                    del parolesSplit[i]
+    newParoles = ""
+    
+
+    for i in range(len(parolesSplit)):
+        if i == 0:
+            newParoles += remove_ansi_escape_codes(parolesSplit[i])
+        else:
+            newParoles += remove_ansi_escape_codes("\n {line}".format(line=parolesSplit[i]))
+    # print(newParoles)
+    # print(len())
+    # print("------")
+    return newParoles
+
+def getLyricsFromlink(link):
+    global lien
+    url = link
+    lien = url
+    print(url)
+    # print("------")
+    # print("Url : " + url)
+
+
+    reponse = requests.get(url)
+    try:
+        paroles = reponse.text.split("""<li>(x2) en fin de ligne&#160;: la ligne doit être répétée 2 fois</li></ul>""")[1].split("""</p><p><br />
+    </p>
+    <h2><span class="mw-headline" id="Dates_de_sortie">Dates de sortie</span>""")[0].replace("</b>","").replace("<b>","").replace("</p>","").replace("<p>","").replace("<br />","").replace("</i>",Style.RESET_ALL).replace("<i>","#").replace("(", "\x1B[3m" + Style.DIM).replace(")", Style.RESET_ALL).replace('<span style="color:#E67E30">', "__").replace("</span>", "__")
+    except:
+        paroles = reponse.text.split("""<li>(x 2) en fin de ligne&#160;: la ligne doit être répétée 2 fois</li></ul>""")[1].split("""</p><p><br />
+    </p>
+    <h2><span class="mw-headline" id="Dates_de_sortie">Dates de sortie</span>""")[0].replace("</b>","").replace("<b>","").replace("</p>","").replace("<p>","").replace("<br />","").replace("</i>",Style.RESET_ALL).replace("<i>","#").replace("(", "\x1B[3m" + Style.DIM).replace(")", Style.RESET_ALL).replace('<span style="color:#E67E30">', "__").replace("</span>", "__")
     parolesSplit = paroles.split("\n")
 
 
@@ -192,7 +277,9 @@ def getSings(part):
     result = []
     for i in range(len(parolesSplit)):
         if not parolesSplit[i] == "" and "href=" in parolesSplit[i]:
-            result.append(html.unescape(parolesSplit[i].split('title="')[1].split('">')[0].lower()))
+            res = html.unescape(parolesSplit[i].split('title="')[1].split('">')[0].lower())
+            if not res == "liste des chansons existantes (de la lettre a à la lettre m)":
+                result.append(res)
 
     return result
 
@@ -201,7 +288,7 @@ def find(pattern, path):
     for root, dirs, files in os.walk(path):
         for name in files:
             if fnmatch.fnmatch(name, pattern):
-                result.append(os.path.join(root, name).split("\\")[1].split(".txt")[0])
+                result.append(os.path.join(root, name).split("\\")[1].split(".txt")[0].replace("%2F", "/").replace("%3F", "?"))
     return result
 
 def chunk_text(text, chunk_size=5):
@@ -569,6 +656,63 @@ def createLyricWindow(lyrics):
         elif event == "-LEGEND-":
             legendWindow()
         
+# sings = getSings(1) + getSings(2)
+# # pprint(sings)
+
+# currentSings = find("*.txt", "./sings")
+# sings2 = []
+# for elem in sings:
+#     if "?" in elem or "/" in elem:
+#         sings2.append(elem.replace("/", "%2F").replace("?", "%3F"))
+#     else:
+#         sings2.append(elem)
+
+# # pprint(getLyrics(sings[0]))
+# input()
+# s = 0
+# for sing in sings2:
+#     if not sing in currentSings:
+#         s +=1
+# i = 0
+# for sing in sings2:
+#     if not sing in currentSings:
+#         os.system('cls')
+#         print(f"titre n°{i}/{s}: " + str(sing))
+#         pyperclip.copy(str(sing))
+#         newLink = input("link :")
+#         # try:
+#         if True:
+#             lyrics = getLyricsFromlink(newLink)
+#             print("ok")
+
+#             new = ""
+#             if "\n" in lyrics:
+#                 Split = lyrics.split("\n")
+                
+#                 for line in Split:
+#                     new += str(line.encode("utf-8"))
+#             else:
+#                 new = lyrics
+#             print(new)
+#             # print(new)
+#             try:
+#                 with open("./sings/{filename}.txt".format(filename=sing.replace("?", "%3F").replace("/", "%2F")), 'w', encoding='utf-8') as file:
+#                     # Write content to the file
+#                     file.write(lyrics)
+#             except Exception as e:
+#                 print("writing problem")
+#                 print(e)
+#                 with open("./log.txt", 'a', encoding='utf-8') as file:
+#                     text = f"""Tried song NAME:"{sing}" | ENCODE_NAME:{titre} | LINK:{lien} and didn't work.\n"""
+#                     file.write(text)
+#                 pyautogui.moveTo(100, 150)
+#                 input()
+#         # except Exception as e:
+#         #     print("problem")
+#         #     print(e)
+#         #     input()
+        
+#         i += 1
 
 
 
@@ -583,16 +727,10 @@ search_layout = [
         sg.In(size=(25, 1), enable_events=True, key="-SONG-", background_color=INPUT_BACKGROUND, text_color="#bcafbf", border_width=0),
         sg.Push(background_color=BACKGROUND_COLOR),
     ],
-    [sg.Push(background_color=BACKGROUND_COLOR), sg.Text("Downloaded song", font=("Helvetica", 14), text_color=TEXT_COLOR, background_color=BACKGROUND_COLOR), sg.Push(background_color=BACKGROUND_COLOR),],
     [
-        sg.Canvas(key="-CANVAS-", size=(272, 149), background_color=MULTILINE_BACKGROUND),
+        sg.Canvas(key="-CANVAS-", size=(272, 374), background_color=MULTILINE_BACKGROUND),
         # sg.Canvas(key="-CANVAS-", size=(100, 50), background_color=MULTILINE_BACKGROUND),
         
-    ],
-    [sg.Push(background_color=BACKGROUND_COLOR), sg.Text("Online song", font=("Helvetica", 14), text_color=TEXT_COLOR, background_color=BACKGROUND_COLOR), sg.Push(background_color=BACKGROUND_COLOR),],
-    [
-        
-        sg.Canvas(key="-CANVAS2-", size=(272, 149), background_color=MULTILINE_BACKGROUND),
     ],
 ]
 
@@ -620,15 +758,15 @@ print(window_search.AllKeysDict)
 # Access the Tkinter canvas through PySimpleGUI
 canvas_elem = window_search['-CANVAS-'].TKCanvas
 # canvas = Canvas(canvas_elem, highlightthickness=0, bg='#64778d')
-canvas = Canvas(canvas_elem, height=149, highlightthickness=0, bg=BACKGROUND_COLOR)
+canvas = Canvas(canvas_elem, height=394, highlightthickness=0, bg=BACKGROUND_COLOR)
 canvas.pack(fill='both', expand=False)
 
 # Draw rounded rectangle for the listbox
-round_rectangle(canvas, 0, 0, 292, 149, radius=25, fill=MULTILINE_BACKGROUND)
+round_rectangle(canvas, 0, 0, 292, 394, radius=25, fill=MULTILINE_BACKGROUND)
 
 # Create a Tkinter Listbox and place it inside the rounded rectangle
 listbox = Listbox(canvas, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12), fg=OPTION_COLOR)
-listbox.place(x=10, y=10, width=222, height=119)  # Adjust dimensions based on your layout
+listbox.place(x=10, y=10, width=222, height=374)  # Adjust dimensions based on your layout
 
 
 # Function to simulate PySimpleGUI's event system using the "-LOCAL SONG LIST-" key
@@ -647,36 +785,7 @@ listbox.bind('<<ListboxSelect>>', on_select)
 
 
 
-############################################### LISTBOX ONLINE 
-# Access the Tkinter canvas through PySimpleGUI
-canvas_elem2 = window_search['-CANVAS2-'].TKCanvas
-# canvas = Canvas(canvas_elem, highlightthickness=0, bg='#64778d')
-canvas2 = Canvas(canvas_elem2, height=149, highlightthickness=0, bg=BACKGROUND_COLOR)
-canvas2.pack(fill='both', expand=False)
-
-# Draw rounded rectangle for the listbox
-round_rectangle(canvas2, 0, 0, 292, 149, radius=25, fill=MULTILINE_BACKGROUND)
-
-# Create a Tkinter Listbox and place it inside the rounded rectangle
-listbox2 = Listbox(canvas2, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12), fg=OPTION_COLOR)
-listbox2.place(x=10, y=10, width=222, height=119)  # Adjust dimensions based on your layout
-
-
-# Function to simulate PySimpleGUI's event system using the "-LOCAL SONG LIST-" key
-def on_select2(event):
-    selected_indices = listbox2.curselection()  # Get selected items
-    selected_songs = [listbox2.get(i) for i in selected_indices]  # Get values of selected items
-    # Send event to PySimpleGUI
-    window_search.write_event_value('-ONLINE SONG LIST-', selected_songs)
-
-def update_listbox2(new_values):
-    listbox2.delete(0, tk.END)  # Clear current items
-    for item in new_values:
-        listbox2.insert(tk.END, item)  # Insert new items
-# Bind the listbox selection to the event handler
-listbox2.bind('<<ListboxSelect>>', on_select2)
-
-files = find('*.txt', './sings')
+files = find('*.txt', sings_dir)
 # window_search.write_event_value('-LOCAL SONG LIST-', files)
 update_listbox(files)
 
@@ -694,46 +803,20 @@ while True:
         break
     elif len(values[event]) > 0 and event == "-SONG-":
         
-        files = find(values[event] + '*.txt', './sings')
+        files = find(values[event] + '*.txt', sings_dir)
         # window_search.write_event_value('-LOCAL SONG LIST-', files)
         update_listbox(files)
 
-        # if 1 == 2:
-        if internet_connection():
-            if values[event][0].upper() < "m":
-                search = getSings(1)
-            else:
-                search = getSings(2)
-            results = [item for item in search if item.lower().startswith(values[event].lower())]
-            # print("taille : " + str(len(search)))
-            for song in results:
-                # print(results[:1])
-                if song in files:
-                    # print(song)
-                    results.remove(song)
-            # window_search["-ONLINE SONG LIST-"].update(results)
-            update_listbox2(results)
+    
     elif len(values[event]) > 0 and event == "-LOCAL SONG LIST-":
-        with open('./sings/{filename}.txt'.format(filename=values[event][0]), 'r') as file:
+        with open(f'{sings_dir}/{values[event][0]}.txt', 'r') as file:
             # Read the entire content of the file
             content = file.read()
             print(content)
             # print(content)
         # window_search.close()
         createLyricWindow(content)
-    elif len(values[event]) > 0 and event == "-ONLINE SONG LIST-":
-        lyrics = getLyrics(values[event][0])
-        Split = lyrics.split("\n")
-        new = ""
-        for line in Split:
-            new += str(line.encode("utf-8"))
-        # print(new)urs
-
-        with open("./sings/{filename}.txt".format(filename=values[event][0]), 'w', encoding='utf-8') as file:
-            # Write content to the file
-            file.write(lyrics)
-        # window_search.close()
-        createLyricWindow(lyrics)
+    
 
 
 # title = urllib.parse.quote(input("Titre : \n"))

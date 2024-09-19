@@ -1,0 +1,33 @@
+
+ 
+ #x2
+ #J'ai bien mangé, j'ai bien bu
+ #J'ai la peau du ventre bien tendue
+ #Merci petit Jésus
+ #Y a mon cousin Gaston
+ #Qui m'arrose de bonbons
+ #Et ma tante Amélie
+ #Qui me fait la polie
+ #Ma maman est en haut
+ #Qui me fait des gâteaux
+ #Mon papa est en bas
+ #Pour me faire deux œufs sur le plat
+ #
+ x2#
+ #J'ai bien mangé, j'ai bien bu
+ #J'ai la peau du ventre bien tendue
+ #Merci petit Jésus
+ #Depuis que je suis né
+ #Je ne fais que manger
+ #J'ai beau crier famine
+ #J'ai toujours mauvaise mine
+ #Y a mon grand frère Henri
+ #Qui me gave de bouillie
+ #Et ma petite sœeur Thérese qui rit
+ #Quand elle me cueille des fraises
+ #
+ x9#
+ #J'ai bien mangé, j'ai bien bu
+ #J'ai la peau du ventre bien tendue
+ #Merci petit Jésus
+ 

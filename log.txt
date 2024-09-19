@@ -1,0 +1,414 @@
+Tried song NAME:"inch'allah (salvatore adamo)" | ENCODE_NAME:Inch'allah_(Salvatore_Adamo) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Inch'allah_(Salvatore_Adamo) and didn't work.
+Tried song NAME:"vous permettez, monsieur ?" | ENCODE_NAME:Vous_permettez,_monsieur_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Vous_permettez,_monsieur_%3F and didn't work.
+Tried song NAME:"rolling in the deep" | ENCODE_NAME:Rolling_in_the_deep | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Rolling_in_the_deep and didn't work.
+Tried song NAME:"l'alizé" | ENCODE_NAME:L'alizé | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/L'alizé and didn't work.
+Tried song NAME:"moi lolita (alizée)" | ENCODE_NAME:Moi_lolita_(Alizée) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Moi_lolita_(Alizée) and didn't work.
+Tried song NAME:"la loi de murphy" | ENCODE_NAME:La_loi_de_murphy | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_loi_de_murphy and didn't work.
+Tried song NAME:"la neige au sahara" | ENCODE_NAME:La_neige_au_sahara | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_neige_au_sahara and didn't work.
+Tried song NAME:"fiche le camp jack" | ENCODE_NAME:Fiche_le_camp_jack | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Fiche_le_camp_jack and didn't work.
+Tried song NAME:"si demain (turn around)" | ENCODE_NAME:Si_demain_(Turn_Around) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Si_demain_(Turn_Around) and didn't work.
+Tried song NAME:"les élucubrations d'antoine" | ENCODE_NAME:Les_élucubrations_d'antoine | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_élucubrations_d'antoine and didn't work.
+Tried song NAME:"je l'appelle canelle" | ENCODE_NAME:Je_l'appelle_canelle | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Je_l'appelle_canelle and didn't work.
+Tried song NAME:"je m'appelle bagdad" | ENCODE_NAME:Je_m'appelle_bagdad | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Je_m'appelle_bagdad and didn't work.
+Tried song NAME:"sur la route (raphaël et jean-louis aubert)" | ENCODE_NAME:Sur_la_route_(Raphaël_Et_Jean-Louis_Aubert) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sur_la_route_(Raphaël_Et_Jean-Louis_Aubert) and didn't work.
+Tried song NAME:"adieu monsieur le professeur" | ENCODE_NAME:Adieu_monsieur_le_professeur | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Adieu_monsieur_le_professeur and didn't work.
+Tried song NAME:"j'aime paris au mois de mai" | ENCODE_NAME:J'aime_paris_au_mois_de_mai | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/J'aime_paris_au_mois_de_mai and didn't work.
+Tried song NAME:"que c'est triste venise" | ENCODE_NAME:Que_c'est_triste_venise | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Que_c'est_triste_venise and didn't work.
+Tried song NAME:"trousse-chemise" | ENCODE_NAME:Trousse-chemise | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Trousse-chemise and didn't work.
+Tried song NAME:"la petite tonkinoise" | ENCODE_NAME:La_petite_tonkinoise | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_petite_tonkinoise and didn't work.
+Tried song NAME:"lady marlène" | ENCODE_NAME:Lady_marlène | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Lady_marlène and didn't work.
+Tried song NAME:"l'aziza" | ENCODE_NAME:L'aziza | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/L'aziza and didn't work.
+Tried song NAME:"tous les cris les s.o.s." | ENCODE_NAME:Tous_les_cris_les_s.o.s. | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tous_les_cris_les_s.o.s. and didn't work.
+Tried song NAME:"dis, quand reviendras-tu ? (barbara)" | ENCODE_NAME:Dis,_quand_reviendras-tu_%3F_(Barbara) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Dis,_quand_reviendras-tu_%3F_(Barbara) and didn't work.
+Tried song NAME:"les mariés de vendée" | ENCODE_NAME:Les_mariés_de_vendée | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_mariés_de_vendée and didn't work.
+Tried song NAME:"harley davidson" | ENCODE_NAME:Harley_davidson | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Harley_davidson and didn't work.
+Tried song NAME:"gaby oh gaby (alain bashung)" | ENCODE_NAME:Gaby_oh_gaby_(Alain_Bashung) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Gaby_oh_gaby_(Alain_Bashung) and didn't work.
+Tried song NAME:"osez joséphine (alain bashung)" | ENCODE_NAME:Osez_joséphine_(Alain_Bashung) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Osez_joséphine_(Alain_Bashung) and didn't work.
+Tried song NAME:"résidents de la république" | ENCODE_NAME:Résidents_de_la_république | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Résidents_de_la_république and didn't work.
+Tried song NAME:"s.o.s. amor" | ENCODE_NAME:S.o.s._amor | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/S.o.s._amor and didn't work.
+Tried song NAME:"la complainte du phoque en alaska" | ENCODE_NAME:La_complainte_du_phoque_en_alaska | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_complainte_du_phoque_en_alaska and didn't work.
+Tried song NAME:"les marchés de provence" | ENCODE_NAME:Les_marchés_de_provence | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_marchés_de_provence and didn't work.
+Tried song NAME:"how deep is your love" | ENCODE_NAME:How_deep_is_your_love | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/How_deep_is_your_love and didn't work.
+Tried song NAME:"la parisienne (marie-paule belle)" | ENCODE_NAME:La_parisienne_(Marie-Paule_Belle) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_parisienne_(Marie-Paule_Belle) and didn't work.
+Tried song NAME:"elle me dit (ben l'oncle soul)" | ENCODE_NAME:Elle_me_dit_(Ben_L'Oncle_Soul) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Elle_me_dit_(Ben_L'Oncle_Soul) and didn't work.
+Tried song NAME:"petite sœur (ben l'oncle soul)" | ENCODE_NAME:Petite_sœur_(Ben_L'Oncle_Soul) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Petite_sœur_(Ben_L'Oncle_Soul) and didn't work.
+Tried song NAME:"maritie et gilbert carpentier" | ENCODE_NAME:Maritie_et_gilbert_carpentier | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Maritie_et_gilbert_carpentier and didn't work.
+Tried song NAME:"1, 2, 3 (amel bent et hatik)" | ENCODE_NAME:1,_2,_3_(Amel_Bent_Et_Hatik) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/1,_2,_3_(Amel_Bent_Et_Hatik) and didn't work.
+Tried song NAME:"jusqu'au bout (amel bent et imen es)" | ENCODE_NAME:Jusqu'au_bout_(Amel_Bent_Et_Imen_Es) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Jusqu'au_bout_(Amel_Bent_Et_Imen_Es) and didn't work.
+Tried song NAME:"nouveau français" | ENCODE_NAME:Nouveau_français | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Nouveau_français and didn't work.
+Tried song NAME:"ça balance pas mal à paris" | ENCODE_NAME:Ça_balance_pas_mal_à_paris | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ça_balance_pas_mal_à_paris and didn't work.
+Tried song NAME:"mademoiselle chang" | ENCODE_NAME:Mademoiselle_chang | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mademoiselle_chang and didn't work.
+Tried song NAME:"histoire d'1 soir (bye bye les galères)" | ENCODE_NAME:Histoire_d'1_soir_(Bye_Bye_Les_Galères) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Histoire_d'1_soir_(Bye_Bye_Les_Galères) and didn't work.
+Tried song NAME:"demain (big flo et oli & p'tit biscuit)" | ENCODE_NAME:Demain_(Big_Flo_Et_Oli_&_P'Tit_Biscuit) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Demain_(Big_Flo_Et_Oli_&_P'Tit_Biscuit) and didn't work.
+Tried song NAME:"dommage (bigflo et oli)" | ENCODE_NAME:Dommage_(Bigflo_Et_Oli) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Dommage_(Bigflo_Et_Oli) and didn't work.
+Tried song NAME:"le brio (branchez la guitare)" | ENCODE_NAME:Le_brio_(Branchez_La_Guitare) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_brio_(Branchez_La_Guitare) and didn't work.
+Tried song NAME:"mangez-moi ! mangez-moi !" | ENCODE_NAME:Mangez-moi_!_mangez-moi_! | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mangez-moi_!_mangez-moi_! and didn't work.
+Tried song NAME:"ballade de johnny-jane" | ENCODE_NAME:Ballade_de_johnny-jane | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ballade_de_johnny-jane and didn't work.
+Tried song NAME:"la légende black" | ENCODE_NAME:La_légende_black | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_légende_black and didn't work.
+Tried song NAME:"mme pavoshko" | ENCODE_NAME:Mme_pavoshko | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mme_pavoshko and didn't work.
+Tried song NAME:"tic-tac" | ENCODE_NAME:Tic-tac | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tic-tac and didn't work.
+Tried song NAME:"elle voulait revoir sa normandie" | ENCODE_NAME:Elle_voulait_revoir_sa_normandie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Elle_voulait_revoir_sa_normandie and didn't work.
+Tried song NAME:"rock amadour" | ENCODE_NAME:Rock_amadour | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Rock_amadour and didn't work.
+Tried song NAME:"coup de blues/soleil" | ENCODE_NAME:Coup_de_blues/soleil | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Coup_de_blues/soleil and didn't work.
+Tried song NAME:"in the stars" | ENCODE_NAME:In_the_stars | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/In_the_stars and didn't work.
+Tried song NAME:"djomb (bien ou quoi)" | ENCODE_NAME:Djomb_(Bien_Ou_Quoi) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Djomb_(Bien_Ou_Quoi) and didn't work.
+Tried song NAME:"bruxelles (boulevard des airs)" | ENCODE_NAME:Bruxelles_(Boulevard_Des_Airs) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bruxelles_(Boulevard_Des_Airs) and didn't work.
+Tried song NAME:"emmène-moi (boulevard des airs)" | ENCODE_NAME:Emmène-moi_(Boulevard_Des_Airs) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Emmène-moi_(Boulevard_Des_Airs) and didn't work.
+Tried song NAME:"c'était bien (au p'tit bal perdu)" | ENCODE_NAME:C'était_bien_(Au_P'Tit_Bal_Perdu) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/C'était_bien_(Au_P'Tit_Bal_Perdu) and didn't work.
+Tried song NAME:"brave margot" | ENCODE_NAME:Brave_margot | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Brave_margot and didn't work.
+Tried song NAME:"le gorille (gare au gorille)" | ENCODE_NAME:Le_gorille_(Gare_Au_Gorille) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_gorille_(Gare_Au_Gorille) and didn't work.
+Tried song NAME:"les sabots d'hélène" | ENCODE_NAME:Les_sabots_d'hélène | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_sabots_d'hélène and didn't work.
+Tried song NAME:"stach stach" | ENCODE_NAME:Stach_stach | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Stach_stach and didn't work.
+Tried song NAME:"la chanson de jacky" | ENCODE_NAME:La_chanson_de_jacky | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_chanson_de_jacky and didn't work.
+Tried song NAME:"les remparts de varsovie" | ENCODE_NAME:Les_remparts_de_varsovie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_remparts_de_varsovie and didn't work.
+Tried song NAME:"viens à saint-germain" | ENCODE_NAME:Viens_à_saint-germain | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Viens_à_saint-germain and didn't work.
+Tried song NAME:"comment ça va pour vous ?" | ENCODE_NAME:Comment_ça_va_pour_vous_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Comment_ça_va_pour_vous_%3F and didn't work.
+Tried song NAME:"mon amant de saint-jean (patrick bruel)" | ENCODE_NAME:Mon_amant_de_saint-jean_(Patrick_Bruel) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mon_amant_de_saint-jean_(Patrick_Bruel) and didn't work.
+Tried song NAME:"place des grands hommes" | ENCODE_NAME:Place_des_grands_hommes | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Place_des_grands_hommes and didn't work.
+Tried song NAME:"mon raymond" | ENCODE_NAME:Mon_raymond | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mon_raymond and didn't work.
+Tried song NAME:"body physical" | ENCODE_NAME:Body_physical | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Body_physical and didn't work.
+Tried song NAME:"la dame de haute-savoie" | ENCODE_NAME:La_dame_de_haute-savoie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_dame_de_haute-savoie and didn't work.
+Tried song NAME:"petite marie" | ENCODE_NAME:Petite_marie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Petite_marie and didn't work.
+Tried song NAME:"samedi soir sur la terre" | ENCODE_NAME:Samedi_soir_sur_la_terre | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Samedi_soir_sur_la_terre and didn't work.
+Tried song NAME:"onde anda" | ENCODE_NAME:Onde_anda | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Onde_anda and didn't work.
+Tried song NAME:"le grand jour (cali et bénabar)" | ENCODE_NAME:Le_grand_jour_(Cali_Et_Bénabar) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_grand_jour_(Cali_Et_Bénabar) and didn't work.
+Tried song NAME:"pomme c" | ENCODE_NAME:Pomme_c | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Pomme_c and didn't work.
+Tried song NAME:"douce france (carte de séjour)" | ENCODE_NAME:Douce_france_(Carte_De_Séjour) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Douce_france_(Carte_De_Séjour) and didn't work.
+Tried song NAME:"chacun fait (c'qui lui plaît)" | ENCODE_NAME:Chacun_fait_(C'Qui_Lui_Plaît) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Chacun_fait_(C'Qui_Lui_Plaît) and didn't work.
+Tried song NAME:"je reviendrai à montréal" | ENCODE_NAME:Je_reviendrai_à_montréal | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Je_reviendrai_à_montréal and didn't work.
+Tried song NAME:"should i leave" | ENCODE_NAME:Should_i_leave | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Should_i_leave and didn't work.
+Tried song NAME:"j't'aime bien lili" | ENCODE_NAME:J't'aime_bien_lili | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/J't'aime_bien_lili and didn't work.
+Tried song NAME:"mister hyde" | ENCODE_NAME:Mister_hyde | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mister_hyde and didn't work.
+Tried song NAME:"anne ma sœur anne" | ENCODE_NAME:Anne_ma_sœur_anne | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Anne_ma_sœur_anne and didn't work.
+Tried song NAME:"f.o.r.t." | ENCODE_NAME:F.o.r.t. | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/F.o.r.t. and didn't work.
+Tried song NAME:"paris sera toujours paris" | ENCODE_NAME:Paris_sera_toujours_paris | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Paris_sera_toujours_paris and didn't work.
+Tried song NAME:"il est libre max" | ENCODE_NAME:Il_est_libre_max | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Il_est_libre_max and didn't work.
+Tried song NAME:"saint claude" | ENCODE_NAME:Saint_claude | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Saint_claude and didn't work.
+Tried song NAME:"elle voulait qu'on l'appelle venise" | ENCODE_NAME:Elle_voulait_qu'on_l'appelle_venise | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Elle_voulait_qu'on_l'appelle_venise and didn't work.
+Tried song NAME:"la californie" | ENCODE_NAME:La_californie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_californie and didn't work.
+Tried song NAME:"this melody" | ENCODE_NAME:This_melody | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/This_melody and didn't work.
+Tried song NAME:"adieu (cœur de pirate)" | ENCODE_NAME:Adieu_(Cœur_De_Pirate) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Adieu_(Cœur_De_Pirate) and didn't work.
+Tried song NAME:"ensemble (cœur de pirate)" | ENCODE_NAME:Ensemble_(Cœur_De_Pirate) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ensemble_(Cœur_De_Pirate) and didn't work.
+Tried song NAME:"mistral gagnant (cœur de pirate)" | ENCODE_NAME:Mistral_gagnant_(Cœur_De_Pirate) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mistral_gagnant_(Cœur_De_Pirate) and didn't work.
+Tried song NAME:"hello dolly" | ENCODE_NAME:Hello_dolly | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Hello_dolly and didn't work.
+Tried song NAME:"tata yoyo" | ENCODE_NAME:Tata_yoyo | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tata_yoyo and didn't work.
+Tried song NAME:"la garonne" | ENCODE_NAME:La_garonne | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_garonne and didn't work.
+Tried song NAME:"bob marley" | ENCODE_NAME:Bob_marley | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bob_marley and didn't work.
+Tried song NAME:"mon soleil (dadju et anitta)" | ENCODE_NAME:Mon_soleil_(Dadju_Et_Anitta) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mon_soleil_(Dadju_Et_Anitta) and didn't work.
+Tried song NAME:"tombé pour la france" | ENCODE_NAME:Tombé_pour_la_france | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tombé_pour_la_france and didn't work.
+Tried song NAME:"week-end à rome" | ENCODE_NAME:Week-end_à_rome | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Week-end_à_rome and didn't work.
+Tried song NAME:"comme disait mistinguett" | ENCODE_NAME:Comme_disait_mistinguett | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Comme_disait_mistinguett and didn't work.
+Tried song NAME:"les enfants du pirée" | ENCODE_NAME:Les_enfants_du_pirée | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_enfants_du_pirée and didn't work.
+Tried song NAME:"dans les yeux d'émilie" | ENCODE_NAME:Dans_les_yeux_d'émilie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Dans_les_yeux_d'émilie and didn't work.
+Tried song NAME:"l'amérique" | ENCODE_NAME:L'amérique | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/L'amérique and didn't work.
+Tried song NAME:"l'équipe à jojo" | ENCODE_NAME:L'équipe_à_jojo | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/L'équipe_à_jojo and didn't work.
+Tried song NAME:"les champs-élysées" | ENCODE_NAME:Les_champs-élysées | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_champs-élysées and didn't work.
+Tried song NAME:"les dalton" | ENCODE_NAME:Les_dalton | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_dalton and didn't work.
+Tried song NAME:"marie-jeanne (joe dassin)" | ENCODE_NAME:Marie-jeanne_(Joe_Dassin) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Marie-jeanne_(Joe_Dassin) and didn't work.
+Tried song NAME:"taka takata (la femme du toréro)" | ENCODE_NAME:Taka_takata_(La_Femme_Du_Toréro) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Taka_takata_(La_Femme_Du_Toréro) and didn't work.
+Tried song NAME:"du côté de chez swann" | ENCODE_NAME:Du_côté_de_chez_swann | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Du_côté_de_chez_swann and didn't work.
+Tried song NAME:"est-ce par hasard ?" | ENCODE_NAME:Est-ce_par_hasard_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Est-ce_par_hasard_%3F and didn't work.
+Tried song NAME:"lettre à hélène" | ENCODE_NAME:Lettre_à_hélène | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Lettre_à_hélène and didn't work.
+Tried song NAME:"est-ce que tu viens pour les vacances ?" | ENCODE_NAME:Est-ce_que_tu_viens_pour_les_vacances_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Est-ce_que_tu_viens_pour_les_vacances_%3F and didn't work.
+Tried song NAME:"mon amant de saint-jean (lucienne delyle)" | ENCODE_NAME:Mon_amant_de_saint-jean_(Lucienne_Delyle) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mon_amant_de_saint-jean_(Lucienne_Delyle) and didn't work.
+Tried song NAME:"sur la route (gérald de palmas)" | ENCODE_NAME:Sur_la_route_(Gérald_De_Palmas) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sur_la_route_(Gérald_De_Palmas) and didn't work.
+Tried song NAME:"fanny ardant et moi" | ENCODE_NAME:Fanny_ardant_et_moi | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Fanny_ardant_et_moi and didn't work.
+Tried song NAME:"chez laurette" | ENCODE_NAME:Chez_laurette | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Chez_laurette and didn't work.
+Tried song NAME:"le loir-et-cher" | ENCODE_NAME:Le_loir-et-cher | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_loir-et-cher and didn't work.
+Tried song NAME:"que marianne était jolie" | ENCODE_NAME:Que_marianne_était_jolie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Que_marianne_était_jolie and didn't work.
+Tried song NAME:"tu dis que tu l'm" | ENCODE_NAME:Tu_dis_que_tu_l'm | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tu_dis_que_tu_l'm and didn't work.
+Tried song NAME:"san ou (la rivière)" | ENCODE_NAME:San_ou_(La_Rivière) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/San_ou_(La_Rivière) and didn't work.
+Tried song NAME:"dj" | ENCODE_NAME:Dj | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Dj and didn't work.
+Tried song NAME:"song for jedi" | ENCODE_NAME:Song_for_jedi | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Song_for_jedi and didn't work.
+Tried song NAME:"ce rêve bleu (karine costa et daniel lévi)" | ENCODE_NAME:Ce_rêve_bleu_(Karine_Costa_Et_Daniel_Lévi) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ce_rêve_bleu_(Karine_Costa_Et_Daniel_Lévi) and didn't work.
+Tried song NAME:"ce rêve bleu (karine costa et paolo domingo)" | ENCODE_NAME:Ce_rêve_bleu_(Karine_Costa_Et_Paolo_Domingo) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ce_rêve_bleu_(Karine_Costa_Et_Paolo_Domingo) and didn't work.
+Tried song NAME:"prince ali" | ENCODE_NAME:Prince_ali | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Prince_ali and didn't work.
+Tried song NAME:"un jour, mon prince viendra (blanche neige et les sept nains)" | ENCODE_NAME:Un_jour,_mon_prince_viendra_(Blanche_Neige_Et_Les_Sept_Nains) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Un_jour,_mon_prince_viendra_(Blanche_Neige_Et_Les_Sept_Nains) and didn't work.
+Tried song NAME:"bibbidi-bobbidi-boo" | ENCODE_NAME:Bibbidi-bobbidi-boo | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bibbidi-bobbidi-boo and didn't work.
+Tried song NAME:"ne parlons pas de bruno" | ENCODE_NAME:Ne_parlons_pas_de_bruno | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ne_parlons_pas_de_bruno and didn't work.
+Tried song NAME:"l'incendie à rio" | ENCODE_NAME:L'incendie_à_rio | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/L'incendie_à_rio and didn't work.
+Tried song NAME:"monsieur cannibale" | ENCODE_NAME:Monsieur_cannibale | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Monsieur_cannibale and didn't work.
+Tried song NAME:"africa (julien doré et dick rivers)" | ENCODE_NAME:Africa_(Julien_Doré_Et_Dick_Rivers) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Africa_(Julien_Doré_Et_Dick_Rivers) and didn't work.
+Tried song NAME:"moi lolita (julien doré)" | ENCODE_NAME:Moi_lolita_(Julien_Doré) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Moi_lolita_(Julien_Doré) and didn't work.
+Tried song NAME:"paris-seychelles" | ENCODE_NAME:Paris-seychelles | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Paris-seychelles and didn't work.
+Tried song NAME:"porto-vecchio" | ENCODE_NAME:Porto-vecchio | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Porto-vecchio and didn't work.
+Tried song NAME:"hou ! la menteuse" | ENCODE_NAME:Hou_!_la_menteuse | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Hou_!_la_menteuse and didn't work.
+Tried song NAME:"mickey donald et moi" | ENCODE_NAME:Mickey_donald_et_moi | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mickey_donald_et_moi and didn't work.
+Tried song NAME:"en transe... ylvanie" | ENCODE_NAME:En_transe..._ylvanie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/En_transe..._ylvanie and didn't work.
+Tried song NAME:"le casse de brice" | ENCODE_NAME:Le_casse_de_brice | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_casse_de_brice and didn't work.
+Tried song NAME:"il est cinq heures, paris s'éveille" | ENCODE_NAME:Il_est_cinq_heures,_paris_s'éveille | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Il_est_cinq_heures,_paris_s'éveille and didn't work.
+Tried song NAME:"la fille du père noël (jacques dutronc)" | ENCODE_NAME:La_fille_du_père_noël_(Jacques_Dutronc) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_fille_du_père_noël_(Jacques_Dutronc) and didn't work.
+Tried song NAME:"j'aime plus paris" | ENCODE_NAME:J'aime_plus_paris | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/J'aime_plus_paris and didn't work.
+Tried song NAME:"pas d'ami (comme toi)" | ENCODE_NAME:Pas_d'ami_(Comme_Toi) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Pas_d'ami_(Comme_Toi) and didn't work.
+Tried song NAME:"chanson d'émilie jolie et du grand oiseau" | ENCODE_NAME:Chanson_d'émilie_jolie_et_du_grand_oiseau | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Chanson_d'émilie_jolie_et_du_grand_oiseau and didn't work.
+Tried song NAME:"les mots (mylène farmer et seal)" | ENCODE_NAME:Les_mots_(Mylène_Farmer_Et_Seal) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_mots_(Mylène_Farmer_Et_Seal) and didn't work.
+Tried song NAME:"l'instant x" | ENCODE_NAME:L'instant_x | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/L'instant_x and didn't work.
+Tried song NAME:"xxl" | ENCODE_NAME:Xxl | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Xxl and didn't work.
+Tried song NAME:"les valses de vienne" | ENCODE_NAME:Les_valses_de_vienne | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_valses_de_vienne and didn't work.
+Tried song NAME:"petit frank" | ENCODE_NAME:Petit_frank | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Petit_frank and didn't work.
+Tried song NAME:"que serais-je sans toi ?" | ENCODE_NAME:Que_serais-je_sans_toi_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Que_serais-je_sans_toi_%3F and didn't work.
+Tried song NAME:"la rua madureira" | ENCODE_NAME:La_rua_madureira | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_rua_madureira and didn't work.
+Tried song NAME:"lady melody" | ENCODE_NAME:Lady_melody | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Lady_melody and didn't work.
+Tried song NAME:"alexandrie alexandra (claude françois)" | ENCODE_NAME:Alexandrie_alexandra_(Claude_François) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Alexandrie_alexandra_(Claude_François) and didn't work.
+Tried song NAME:"je vais à rio" | ENCODE_NAME:Je_vais_à_rio | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Je_vais_à_rio and didn't work.
+Tried song NAME:"né en 17 à leidenstadt" | ENCODE_NAME:Né_en_17_à_leidenstadt | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Né_en_17_à_leidenstadt and didn't work.
+Tried song NAME:"fais-le" | ENCODE_NAME:Fais-le | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Fais-le and didn't work.
+Tried song NAME:"attention mesdames et messieurs" | ENCODE_NAME:Attention_mesdames_et_messieurs | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Attention_mesdames_et_messieurs and didn't work.
+Tried song NAME:"chante… (comme si tu devais mourir demain)" | ENCODE_NAME:Chante…_(Comme_Si_Tu_Devais_Mourir_Demain) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Chante…_(Comme_Si_Tu_Devais_Mourir_Demain) and didn't work.
+Tried song NAME:"la fête (michel fugain et le big bazar)" | ENCODE_NAME:La_fête_(Michel_Fugain_Et_Le_Big_Bazar) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_fête_(Michel_Fugain_Et_Le_Big_Bazar) and didn't work.
+Tried song NAME:"les acadiens" | ENCODE_NAME:Les_acadiens | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_acadiens and didn't work.
+Tried song NAME:"ballade de melody nelson" | ENCODE_NAME:Ballade_de_melody_nelson | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ballade_de_melody_nelson and didn't work.
+Tried song NAME:"bonnie and clyde" | ENCODE_NAME:Bonnie_and_clyde | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bonnie_and_clyde and didn't work.
+Tried song NAME:"comic strip" | ENCODE_NAME:Comic_strip | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Comic_strip and didn't work.
+Tried song NAME:"dieu fumeur de havanes" | ENCODE_NAME:Dieu_fumeur_de_havanes | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Dieu_fumeur_de_havanes and didn't work.
+Tried song NAME:"elaeudanla téitéia" | ENCODE_NAME:Elaeudanla_téitéia | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Elaeudanla_téitéia and didn't work.
+Tried song NAME:"initials b.b." | ENCODE_NAME:Initials_b.b. | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Initials_b.b. and didn't work.
+Tried song NAME:"la chanson de prévert" | ENCODE_NAME:La_chanson_de_prévert | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_chanson_de_prévert and didn't work.
+Tried song NAME:"lemon incest" | ENCODE_NAME:Lemon_incest | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Lemon_incest and didn't work.
+Tried song NAME:"sorry angel" | ENCODE_NAME:Sorry_angel | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sorry_angel and didn't work.
+Tried song NAME:"hong-kong star" | ENCODE_NAME:Hong-kong_star | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Hong-kong_star and didn't work.
+Tried song NAME:"la chanson d'azima" | ENCODE_NAME:La_chanson_d'azima | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_chanson_d'azima and didn't work.
+Tried song NAME:"sacré charlemagne" | ENCODE_NAME:Sacré_charlemagne | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sacré_charlemagne and didn't work.
+Tried song NAME:"i will survive" | ENCODE_NAME:I_will_survive | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/I_will_survive and didn't work.
+Tried song NAME:"i am what i am" | ENCODE_NAME:I_am_what_i_am | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/I_am_what_i_am and didn't work.
+Tried song NAME:"aglaé et sidonie" | ENCODE_NAME:Aglaé_et_sidonie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Aglaé_et_sidonie and didn't work.
+Tried song NAME:"amour, gloire et beauté" | ENCODE_NAME:Amour,_gloire_et_beauté | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Amour,_gloire_et_beauté and didn't work.
+Tried song NAME:"arnold et willy" | ENCODE_NAME:Arnold_et_willy | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Arnold_et_willy and didn't work.
+Tried song NAME:"au pays de candy" | ENCODE_NAME:Au_pays_de_candy | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Au_pays_de_candy and didn't work.
+Tried song NAME:"capitaine flam" | ENCODE_NAME:Capitaine_flam | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Capitaine_flam and didn't work.
+Tried song NAME:"hip hop" | ENCODE_NAME:Hip_hop | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Hip_hop and didn't work.
+Tried song NAME:"inspecteur gadget" | ENCODE_NAME:Inspecteur_gadget | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Inspecteur_gadget and didn't work.
+Tried song NAME:"nicky larson" | ENCODE_NAME:Nicky_larson | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Nicky_larson and didn't work.
+Tried song NAME:"pat' patrouille" | ENCODE_NAME:Pat'_patrouille | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Pat'_patrouille and didn't work.
+Tried song NAME:"signé cat's eyes" | ENCODE_NAME:Signé_cat's_eyes | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Signé_cat's_eyes and didn't work.
+Tried song NAME:"starsky et hutch" | ENCODE_NAME:Starsky_et_hutch | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Starsky_et_hutch and didn't work.
+Tried song NAME:"tom sawyer" | ENCODE_NAME:Tom_sawyer | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tom_sawyer and didn't work.
+Tried song NAME:"le petit gonzales" | ENCODE_NAME:Le_petit_gonzales | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_petit_gonzales and didn't work.
+Tried song NAME:"color gitano" | ENCODE_NAME:Color_gitano | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Color_gitano and didn't work.
+Tried song NAME:"encore (kendji girac et florent pagny)" | ENCODE_NAME:Encore_(Kendji_Girac_Et_Florent_Pagny) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Encore_(Kendji_Girac_Et_Florent_Pagny) and didn't work.
+Tried song NAME:"le feu (kendji girac et vianney)" | ENCODE_NAME:Le_feu_(Kendji_Girac_Et_Vianney) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_feu_(Kendji_Girac_Et_Vianney) and didn't work.
+Tried song NAME:"que dieu me pardonne" | ENCODE_NAME:Que_dieu_me_pardonne | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Que_dieu_me_pardonne and didn't work.
+Tried song NAME:"tu y yo" | ENCODE_NAME:Tu_y_yo | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tu_y_yo and didn't work.
+Tried song NAME:"le youki" | ENCODE_NAME:Le_youki | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_youki and didn't work.
+Tried song NAME:"davy crockett" | ENCODE_NAME:Davy_crockett | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Davy_crockett and didn't work.
+Tried song NAME:"pandi-panda" | ENCODE_NAME:Pandi-panda | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Pandi-panda and didn't work.
+Tried song NAME:"roméo kiffe juliette" | ENCODE_NAME:Roméo_kiffe_juliette | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Roméo_kiffe_juliette and didn't work.
+Tried song NAME:"lady lay" | ENCODE_NAME:Lady_lay | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Lady_lay and didn't work.
+Tried song NAME:"mon p'tit loup (ça va faire mal)" | ENCODE_NAME:Mon_p'tit_loup_(Ça_Va_Faire_Mal) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mon_p'tit_loup_(Ça_Va_Faire_Mal) and didn't work.
+Tried song NAME:"o carole" | ENCODE_NAME:O_carole | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/O_carole and didn't work.
+Tried song NAME:"oh ma jolie sarah" | ENCODE_NAME:Oh_ma_jolie_sarah | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Oh_ma_jolie_sarah and didn't work.
+Tried song NAME:"quelque chose de tennessee" | ENCODE_NAME:Quelque_chose_de_tennessee | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Quelque_chose_de_tennessee and didn't work.
+Tried song NAME:"puisque vous partez en voyage (françoise hardy et jacques dutronc)" | ENCODE_NAME:Puisque_vous_partez_en_voyage_(Françoise_Hardy_Et_Jacques_Dutronc) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Puisque_vous_partez_en_voyage_(Françoise_Hardy_Et_Jacques_Dutronc) and didn't work.
+Tried song NAME:"la meilleure (hatik et jok'air)" | ENCODE_NAME:La_meilleure_(Hatik_Et_Jok'Air) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_meilleure_(Hatik_Et_Jok'Air) and didn't work.
+Tried song NAME:"je m'appelle hélène" | ENCODE_NAME:Je_m'appelle_hélène | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Je_m'appelle_hélène and didn't work.
+Tried song NAME:"est-ce que tu m'aimeras encore ?" | ENCODE_NAME:Est-ce_que_tu_m'aimeras_encore_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Est-ce_que_tu_m'aimeras_encore_%3F and didn't work.
+Tried song NAME:"tired of being sorry (laisse le destin l'emporter)" | ENCODE_NAME:Tired_of_being_sorry_(Laisse_Le_Destin_L'Emporter) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tired_of_being_sorry_(Laisse_Le_Destin_L'Emporter) and didn't work.
+Tried song NAME:"pauvres diables (vous les femmes)" | ENCODE_NAME:Pauvres_diables_(Vous_Les_Femmes) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Pauvres_diables_(Vous_Les_Femmes) and didn't work.
+Tried song NAME:"que fais-tu ce soir après dîner ?" | ENCODE_NAME:Que_fais-tu_ce_soir_après_dîner_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Que_fais-tu_ce_soir_après_dîner_%3F and didn't work.
+Tried song NAME:"s.o.s." | ENCODE_NAME:S.o.s. | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/S.o.s. and didn't work.
+Tried song NAME:"alice & june" | ENCODE_NAME:Alice_&_june | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Alice_&_june and didn't work.
+Tried song NAME:"kao bang" | ENCODE_NAME:Kao_bang | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Kao_bang and didn't work.
+Tried song NAME:"la fm qui s'est spécialisée funky" | ENCODE_NAME:La_fm_qui_s'est_spécialisée_funky | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_fm_qui_s'est_spécialisée_funky and didn't work.
+Tried song NAME:"super nana" | ENCODE_NAME:Super_nana | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Super_nana and didn't work.
+Tried song NAME:"d'allemagne" | ENCODE_NAME:D'allemagne | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/D'allemagne and didn't work.
+Tried song NAME:"kennedy rose" | ENCODE_NAME:Kennedy_rose | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Kennedy_rose and didn't work.
+Tried song NAME:"quand jimmy dit" | ENCODE_NAME:Quand_jimmy_dit | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Quand_jimmy_dit and didn't work.
+Tried song NAME:"une fille de l'est" | ENCODE_NAME:Une_fille_de_l'est | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Une_fille_de_l'est and didn't work.
+Tried song NAME:"marly-gomont" | ENCODE_NAME:Marly-gomont | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Marly-gomont and didn't work.
+Tried song NAME:"100% vip" | ENCODE_NAME:100%_vip | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/100%_vip and didn't work.
+Tried song NAME:"abc pour casser" | ENCODE_NAME:Abc_pour_casser | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Abc_pour_casser and didn't work.
+Tried song NAME:"femme like u" | ENCODE_NAME:Femme_like_u | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Femme_like_u and didn't work.
+Tried song NAME:"samba maria" | ENCODE_NAME:Samba_maria | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Samba_maria and didn't work.
+Tried song NAME:"le graal" | ENCODE_NAME:Le_graal | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_graal and didn't work.
+Tried song NAME:"bons baisers de fort-de-france" | ENCODE_NAME:Bons_baisers_de_fort-de-france | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bons_baisers_de_fort-de-france and didn't work.
+Tried song NAME:"vive le douanier rousseau" | ENCODE_NAME:Vive_le_douanier_rousseau | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Vive_le_douanier_rousseau and didn't work.
+Tried song NAME:"il a neigé sur yesterday" | ENCODE_NAME:Il_a_neigé_sur_yesterday | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Il_a_neigé_sur_yesterday and didn't work.
+Tried song NAME:"ivan boris et moi" | ENCODE_NAME:Ivan_boris_et_moi | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ivan_boris_et_moi and didn't work.
+Tried song NAME:"les p'tites femmes de pigalle" | ENCODE_NAME:Les_p'tites_femmes_de_pigalle | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_p'tites_femmes_de_pigalle and didn't work.
+Tried song NAME:"bal de bamako" | ENCODE_NAME:Bal_de_bamako | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bal_de_bamako and didn't work.
+Tried song NAME:"la goffa lolita" | ENCODE_NAME:La_goffa_lolita | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_goffa_lolita and didn't work.
+Tried song NAME:"aragon et castille" | ENCODE_NAME:Aragon_et_castille | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Aragon_et_castille and didn't work.
+Tried song NAME:"ta katie t'a quitté" | ENCODE_NAME:Ta_katie_t'a_quitté | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ta_katie_t'a_quitté and didn't work.
+Tried song NAME:"catchu catchu" | ENCODE_NAME:Catchu_catchu | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Catchu_catchu and didn't work.
+Tried song NAME:"stand the ghetto" | ENCODE_NAME:Stand_the_ghetto | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Stand_the_ghetto and didn't work.
+Tried song NAME:"c'est ça la france" | ENCODE_NAME:C'est_ça_la_france | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/C'est_ça_la_france and didn't work.
+Tried song NAME:"le pont mirabeau" | ENCODE_NAME:Le_pont_mirabeau | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_pont_mirabeau and didn't work.
+Tried song NAME:"la chenille synchro (la cheu-cheu)" | ENCODE_NAME:La_chenille_synchro_(La_Cheu-Cheu) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_chenille_synchro_(La_Cheu-Cheu) and didn't work.
+Tried song NAME:"san francisco" | ENCODE_NAME:San_francisco | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/San_francisco and didn't work.
+Tried song NAME:"même si (grégory lemarchal et lucie silvas)" | ENCODE_NAME:Même_si_(Grégory_Lemarchal_Et_Lucie_Silvas) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Même_si_(Grégory_Lemarchal_Et_Lucie_Silvas) and didn't work.
+Tried song NAME:"s.o.s. d'un terrien en détresse (grégory lemarchal)" | ENCODE_NAME:S.o.s._d'un_terrien_en_détresse_(Grégory_Lemarchal) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/S.o.s._d'un_terrien_en_détresse_(Grégory_Lemarchal) and didn't work.
+Tried song NAME:"brésil, finistère" | ENCODE_NAME:Brésil,_finistère | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Brésil,_finistère and didn't work.
+Tried song NAME:"la jument de michao" | ENCODE_NAME:La_jument_de_michao | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_jument_de_michao and didn't work.
+Tried song NAME:"hey jude" | ENCODE_NAME:Hey_jude | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Hey_jude and didn't work.
+Tried song NAME:"how deep is your love" | ENCODE_NAME:How_deep_is_your_love | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/How_deep_is_your_love and didn't work.
+Tried song NAME:"est-ce que tu le sais ?" | ENCODE_NAME:Est-ce_que_tu_le_sais_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Est-ce_que_tu_le_sais_%3F and didn't work.
+Tried song NAME:"twist à saint-tropez" | ENCODE_NAME:Twist_à_saint-tropez | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Twist_à_saint-tropez and didn't work.
+Tried song NAME:"madame madame" | ENCODE_NAME:Madame_madame | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Madame_madame and didn't work.
+Tried song NAME:"mon frère (les dix commandements)" | ENCODE_NAME:Mon_frère_(Les_Dix_Commandements) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mon_frère_(Les_Dix_Commandements) and didn't work.
+Tried song NAME:"ici les enfoirés" | ENCODE_NAME:Ici_les_enfoirés | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ici_les_enfoirés and didn't work.
+Tried song NAME:"flip-flap" | ENCODE_NAME:Flip-flap | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Flip-flap and didn't work.
+Tried song NAME:"auteuil neuilly passy" | ENCODE_NAME:Auteuil_neuilly_passy | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Auteuil_neuilly_passy and didn't work.
+Tried song NAME:"l'autre finistère" | ENCODE_NAME:L'autre_finistère | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/L'autre_finistère and didn't work.
+Tried song NAME:"ma mélissa" | ENCODE_NAME:Ma_mélissa | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ma_mélissa and didn't work.
+Tried song NAME:"sous le soleil de bodega" | ENCODE_NAME:Sous_le_soleil_de_bodega | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sous_le_soleil_de_bodega and didn't work.
+Tried song NAME:"love lioubov amour" | ENCODE_NAME:Love_lioubov_amour | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Love_lioubov_amour and didn't work.
+Tried song NAME:"manu chao" | ENCODE_NAME:Manu_chao | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Manu_chao and didn't work.
+Tried song NAME:"sobri (notre destin)" | ENCODE_NAME:Sobri_(Notre_Destin) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sobri_(Notre_Destin) and didn't work.
+Tried song NAME:"voyage en italie" | ENCODE_NAME:Voyage_en_italie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Voyage_en_italie and didn't work.
+Tried song NAME:"je serai (ta meilleure amie)" | ENCODE_NAME:Je_serai_(Ta_Meilleure_Amie) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Je_serai_(Ta_Meilleure_Amie) and didn't work.
+Tried song NAME:"tout le monde (sauf toi)" | ENCODE_NAME:Tout_le_monde_(Sauf_Toi) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tout_le_monde_(Sauf_Toi) and didn't work.
+Tried song NAME:"à toi (m et gail ann dorsey)" | ENCODE_NAME:À_toi_(M_Et_Gail_Ann_Dorsey) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/À_toi_(M_Et_Gail_Ann_Dorsey) and didn't work.
+Tried song NAME:"mama sam" | ENCODE_NAME:Mama_sam | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mama_sam and didn't work.
+Tried song NAME:"la parisienne (christophe maé)" | ENCODE_NAME:La_parisienne_(Christophe_Maé) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_parisienne_(Christophe_Maé) and didn't work.
+Tried song NAME:"belle (dadju/gims/slimane)" | ENCODE_NAME:Belle_(Dadju/Gims/Slimane) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Belle_(Dadju/Gims/Slimane) and didn't work.
+Tried song NAME:"est-ce que tu m'aimes ?" | ENCODE_NAME:Est-ce_que_tu_m'aimes_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Est-ce_que_tu_m'aimes_%3F and didn't work.
+Tried song NAME:"miami vice" | ENCODE_NAME:Miami_vice | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Miami_vice and didn't work.
+Tried song NAME:"mamma mia (mamma mia)" | ENCODE_NAME:Mamma_mia_(Mamma_Mia) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mamma_mia_(Mamma_Mia) and didn't work.
+Tried song NAME:"la tribu de dana" | ENCODE_NAME:La_tribu_de_dana | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_tribu_de_dana and didn't work.
+Tried song NAME:"la chapelle de harlem" | ENCODE_NAME:La_chapelle_de_harlem | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_chapelle_de_harlem and didn't work.
+Tried song NAME:"la belle de cadix" | ENCODE_NAME:La_belle_de_cadix | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_belle_de_cadix and didn't work.
+Tried song NAME:"je m'éclate au sénégal" | ENCODE_NAME:Je_m'éclate_au_sénégal | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Je_m'éclate_au_sénégal and didn't work.
+Tried song NAME:"johnny, johnny" | ENCODE_NAME:Johnny,_johnny | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Johnny,_johnny and didn't work.
+Tried song NAME:"lambé an dro" | ENCODE_NAME:Lambé_an_dro | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Lambé_an_dro and didn't work.
+Tried song NAME:"sur un prélude de bach" | ENCODE_NAME:Sur_un_prélude_de_bach | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sur_un_prélude_de_bach and didn't work.
+Tried song NAME:"caroline (mc solaar)" | ENCODE_NAME:Caroline_(Mc_Solaar) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Caroline_(Mc_Solaar) and didn't work.
+Tried song NAME:"da vinci claude" | ENCODE_NAME:Da_vinci_claude | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Da_vinci_claude and didn't work.
+Tried song NAME:"inch'allah (mc solaar)" | ENCODE_NAME:Inch'allah_(Mc_Solaar) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Inch'allah_(Mc_Solaar) and didn't work.
+Tried song NAME:"hijo de la luna" | ENCODE_NAME:Hijo_de_la_luna | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Hijo_de_la_luna and didn't work.
+Tried song NAME:"adieu jolie candy" | ENCODE_NAME:Adieu_jolie_candy | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Adieu_jolie_candy and didn't work.
+Tried song NAME:"puisque vous partez en voyage (mireille et jean sablon)" | ENCODE_NAME:Puisque_vous_partez_en_voyage_(Mireille_Et_Jean_Sablon) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Puisque_vous_partez_en_voyage_(Mireille_Et_Jean_Sablon) and didn't work.
+Tried song NAME:"et la voix d'elvis" | ENCODE_NAME:Et_la_voix_d'elvis | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Et_la_voix_d'elvis and didn't work.
+Tried song NAME:"rio grande" | ENCODE_NAME:Rio_grande | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Rio_grande and didn't work.
+Tried song NAME:"sur la route de memphis" | ENCODE_NAME:Sur_la_route_de_memphis | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sur_la_route_de_memphis and didn't work.
+Tried song NAME:"les poèmes de michelle" | ENCODE_NAME:Les_poèmes_de_michelle | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_poèmes_de_michelle and didn't work.
+Tried song NAME:"à paris" | ENCODE_NAME:À_paris | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/À_paris and didn't work.
+Tried song NAME:"brigitte bardot" | ENCODE_NAME:Brigitte_bardot | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Brigitte_bardot and didn't work.
+Tried song NAME:"si tu vas à rio" | ENCODE_NAME:Si_tu_vas_à_rio | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Si_tu_vas_à_rio and didn't work.
+Tried song NAME:"coucouroucoucou paloma" | ENCODE_NAME:Coucouroucoucou_paloma | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Coucouroucoucou_paloma and didn't work.
+Tried song NAME:"les eaux de mars (georges moustaki)" | ENCODE_NAME:Les_eaux_de_mars_(Georges_Moustaki) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_eaux_de_mars_(Georges_Moustaki) and didn't work.
+Tried song NAME:"fio maravilha" | ENCODE_NAME:Fio_maravilha | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Fio_maravilha and didn't work.
+Tried song NAME:"métis(se)" | ENCODE_NAME:Métis(Se) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Métis(Se) and didn't work.
+Tried song NAME:"saga africa" | ENCODE_NAME:Saga_africa | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Saga_africa and didn't work.
+Tried song NAME:"fais-moi mal, johnny !" | ENCODE_NAME:Fais-moi_mal,_johnny_! | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Fais-moi_mal,_johnny_! and didn't work.
+Tried song NAME:"un jour en france" | ENCODE_NAME:Un_jour_en_france | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Un_jour_en_france and didn't work.
+Tried song NAME:"belle (notre-dame de paris)" | ENCODE_NAME:Belle_(Notre-Dame_De_Paris) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Belle_(Notre-Dame_De_Paris) and didn't work.
+Tried song NAME:"vivre (notre-dame de paris)" | ENCODE_NAME:Vivre_(Notre-Dame_De_Paris) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Vivre_(Notre-Dame_De_Paris) and didn't work.
+Tried song NAME:"la fièvre (suprême ntm)" | ENCODE_NAME:La_fièvre_(Suprême_Ntm) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_fièvre_(Suprême_Ntm) and didn't work.
+Tried song NAME:"ma benz (suprême ntm)" | ENCODE_NAME:Ma_benz_(Suprême_Ntm) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ma_benz_(Suprême_Ntm) and didn't work.
+Tried song NAME:"évidemment (orelsan et angèle)" | ENCODE_NAME:Évidemment_(Orelsan_Et_Angèle) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Évidemment_(Orelsan_Et_Angèle) and didn't work.
+Tried song NAME:"la pluie (orelsan et stromae)" | ENCODE_NAME:La_pluie_(Orelsan_Et_Stromae) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_pluie_(Orelsan_Et_Stromae) and didn't work.
+Tried song NAME:"d.i.s.c.o." | ENCODE_NAME:D.i.s.c.o. | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/D.i.s.c.o. and didn't work.
+Tried song NAME:"t'es ok" | ENCODE_NAME:T'es_ok | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/T'es_ok and didn't work.
+Tried song NAME:"adolescente pirate" | ENCODE_NAME:Adolescente_pirate | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Adolescente_pirate and didn't work.
+Tried song NAME:"châtelet les halles" | ENCODE_NAME:Châtelet_les_halles | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Châtelet_les_halles and didn't work.
+Tried song NAME:"la seine" | ENCODE_NAME:La_seine | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_seine and didn't work.
+Tried song NAME:"love song" | ENCODE_NAME:Love_song | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Love_song and didn't work.
+Tried song NAME:"marilyn & john" | ENCODE_NAME:Marilyn_&_john | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Marilyn_&_john and didn't work.
+Tried song NAME:"tes états d'âme… éric" | ENCODE_NAME:Tes_états_d'âme…_éric | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tes_états_d'âme…_éric and didn't work.
+Tried song NAME:"tonton cristobal" | ENCODE_NAME:Tonton_cristobal | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tonton_cristobal and didn't work.
+Tried song NAME:"je pars (le vol de nuit s'en va)" | ENCODE_NAME:Je_pars_(Le_Vol_De_Nuit_S'En_Va) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Je_pars_(Le_Vol_De_Nuit_S'En_Va) and didn't work.
+Tried song NAME:"so far away from l.a." | ENCODE_NAME:So_far_away_from_l.a. | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/So_far_away_from_l.a. and didn't work.
+Tried song NAME:"quel souci la boétie" | ENCODE_NAME:Quel_souci_la_boétie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Quel_souci_la_boétie and didn't work.
+Tried song NAME:"à quoi ça sert l'amour ?" | ENCODE_NAME:À_quoi_ça_sert_l'amour_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/À_quoi_ça_sert_l'amour_%3F and didn't work.
+Tried song NAME:"les trois cloches (édith piaf et les compagnons de la chanson)" | ENCODE_NAME:Les_trois_cloches_(Édith_Piaf_Et_Les_Compagnons_De_La_Chanson) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_trois_cloches_(Édith_Piaf_Et_Les_Compagnons_De_La_Chanson) and didn't work.
+Tried song NAME:"mon dieu" | ENCODE_NAME:Mon_dieu | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Mon_dieu and didn't work.
+Tried song NAME:"sous le ciel de paris" | ENCODE_NAME:Sous_le_ciel_de_paris | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sous_le_ciel_de_paris and didn't work.
+Tried song NAME:"sympathique (je ne veux pas travailler)" | ENCODE_NAME:Sympathique_(Je_Ne_Veux_Pas_Travailler) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sympathique_(Je_Ne_Veux_Pas_Travailler) and didn't work.
+Tried song NAME:"e viva españa" | ENCODE_NAME:E_viva_españa | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/E_viva_españa and didn't work.
+Tried song NAME:"goodbye marylou" | ENCODE_NAME:Goodbye_marylou | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Goodbye_marylou and didn't work.
+Tried song NAME:"le bal des laze" | ENCODE_NAME:Le_bal_des_laze | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_bal_des_laze and didn't work.
+Tried song NAME:"lettre à france" | ENCODE_NAME:Lettre_à_france | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Lettre_à_france and didn't work.
+Tried song NAME:"qui a tué grand' maman ?" | ENCODE_NAME:Qui_a_tué_grand'_maman_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Qui_a_tué_grand'_maman_%3F and didn't work.
+Tried song NAME:"regarde-moi (teste-moi, déteste-moi)" | ENCODE_NAME:Regarde-moi_(Teste-Moi,_Déteste-Moi) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Regarde-moi_(Teste-Moi,_Déteste-Moi) and didn't work.
+Tried song NAME:"we are the champions" | ENCODE_NAME:We_are_the_champions | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/We_are_the_champions and didn't work.
+Tried song NAME:"we will rock you" | ENCODE_NAME:We_will_rock_you | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/We_will_rock_you and didn't work.
+Tried song NAME:"ah ! si j'étais riche…" | ENCODE_NAME:Ah_!_si_j'étais_riche… | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ah_!_si_j'étais_riche… and didn't work.
+Tried song NAME:"manhattan-kaboul" | ENCODE_NAME:Manhattan-kaboul | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Manhattan-kaboul and didn't work.
+Tried song NAME:"l'italien" | ENCODE_NAME:L'italien | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/L'italien and didn't work.
+Tried song NAME:"la grande zoa" | ENCODE_NAME:La_grande_zoa | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_grande_zoa and didn't work.
+Tried song NAME:"ma cabane au canada" | ENCODE_NAME:Ma_cabane_au_canada | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ma_cabane_au_canada and didn't work.
+Tried song NAME:"dans mon hlm" | ENCODE_NAME:Dans_mon_hlm | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Dans_mon_hlm and didn't work.
+Tried song NAME:"docteur renaud, mister renard" | ENCODE_NAME:Docteur_renaud,_mister_renard | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Docteur_renaud,_mister_renard and didn't work.
+Tried song NAME:"la mère à titi" | ENCODE_NAME:La_mère_à_titi | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_mère_à_titi and didn't work.
+Tried song NAME:"manhattan-kaboul" | ENCODE_NAME:Manhattan-kaboul | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Manhattan-kaboul and didn't work.
+Tried song NAME:"miss maggie" | ENCODE_NAME:Miss_maggie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Miss_maggie and didn't work.
+Tried song NAME:"les gondoles à venise" | ENCODE_NAME:Les_gondoles_à_venise | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_gondoles_à_venise and didn't work.
+Tried song NAME:"ding dang dong (ringing at your bell)" | ENCODE_NAME:Ding_dang_dong_(Ringing_At_Your_Bell) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ding_dang_dong_(Ringing_At_Your_Bell) and didn't work.
+Tried song NAME:"les histoires d'a" | ENCODE_NAME:Les_histoires_d'a | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_histoires_d'a and didn't work.
+Tried song NAME:"petit papa noël" | ENCODE_NAME:Petit_papa_noël | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Petit_papa_noël and didn't work.
+Tried song NAME:"help myself" | ENCODE_NAME:Help_myself | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Help_myself and didn't work.
+Tried song NAME:"alia souza" | ENCODE_NAME:Alia_souza | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Alia_souza and didn't work.
+Tried song NAME:"bernard's song (il n'est de nulle part)" | ENCODE_NAME:Bernard's_song_(Il_N'Est_De_Nulle_Part) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bernard's_song_(Il_N'Est_De_Nulle_Part) and didn't work.
+Tried song NAME:"bonsoir clara" | ENCODE_NAME:Bonsoir_clara | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bonsoir_clara and didn't work.
+Tried song NAME:"j'habite en france" | ENCODE_NAME:J'habite_en_france | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/J'habite_en_france and didn't work.
+Tried song NAME:"la java de broadway" | ENCODE_NAME:La_java_de_broadway | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_java_de_broadway and didn't work.
+Tried song NAME:"le bac g" | ENCODE_NAME:Le_bac_g | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_bac_g and didn't work.
+Tried song NAME:"le france" | ENCODE_NAME:Le_france | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_france and didn't work.
+Tried song NAME:"les lacs du connemara" | ENCODE_NAME:Les_lacs_du_connemara | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_lacs_du_connemara and didn't work.
+Tried song NAME:"marie-jeanne (michel sardou)" | ENCODE_NAME:Marie-jeanne_(Michel_Sardou) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Marie-jeanne_(Michel_Sardou) and didn't work.
+Tried song NAME:"vladimir ilitch" | ENCODE_NAME:Vladimir_ilitch | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Vladimir_ilitch and didn't work.
+Tried song NAME:"zombi dupont" | ENCODE_NAME:Zombi_dupont | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Zombi_dupont and didn't work.
+Tried song NAME:"la p'tite lady" | ENCODE_NAME:La_p'tite_lady | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_p'tite_lady and didn't work.
+Tried song NAME:"ah… si tu pouvais fermer ta gueule…" | ENCODE_NAME:Ah…_si_tu_pouvais_fermer_ta_gueule… | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ah…_si_tu_pouvais_fermer_ta_gueule… and didn't work.
+Tried song NAME:"waka waka (this time for africa)" | ENCODE_NAME:Waka_waka_(This_Time_For_Africa) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Waka_waka_(This_Time_For_Africa) and didn't work.
+Tried song NAME:"whenever wherever" | ENCODE_NAME:Whenever_wherever | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Whenever_wherever and didn't work.
+Tried song NAME:"adam et ève" | ENCODE_NAME:Adam_et_ève | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Adam_et_ève and didn't work.
+Tried song NAME:"les gondoles à venise" | ENCODE_NAME:Les_gondoles_à_venise | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_gondoles_à_venise and didn't work.
+Tried song NAME:"petite fille de français moyen" | ENCODE_NAME:Petite_fille_de_français_moyen | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Petite_fille_de_français_moyen and didn't work.
+Tried song NAME:"oh ! j'cours tout seul" | ENCODE_NAME:Oh_!_j'cours_tout_seul | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Oh_!_j'cours_tout_seul and didn't work.
+Tried song NAME:"papa tango charly" | ENCODE_NAME:Papa_tango_charly | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Papa_tango_charly and didn't work.
+Tried song NAME:"en apesanteur (shy'm)" | ENCODE_NAME:En_apesanteur_(Shy'M) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/En_apesanteur_(Shy'M) and didn't work.
+Tried song NAME:"au pays des merveilles de juliet" | ENCODE_NAME:Au_pays_des_merveilles_de_juliet | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Au_pays_des_merveilles_de_juliet and didn't work.
+Tried song NAME:"j'ai rêvé new york" | ENCODE_NAME:J'ai_rêvé_new_york | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/J'ai_rêvé_new_york and didn't work.
+Tried song NAME:"étoile des neiges (simon et les modanais)" | ENCODE_NAME:Étoile_des_neiges_(Simon_Et_Les_Modanais) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Étoile_des_neiges_(Simon_Et_Les_Modanais) and didn't work.
+Tried song NAME:"la dernière danse (ne rentre pas chez toi ce soir)" | ENCODE_NAME:La_dernière_danse_(Ne_Rentre_Pas_Chez_Toi_Ce_Soir) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_dernière_danse_(Ne_Rentre_Pas_Chez_Toi_Ce_Soir) and didn't work.
+Tried song NAME:"comment te dire adieu (jimmy somerville et june miles kingston)" | ENCODE_NAME:Comment_te_dire_adieu_(Jimmy_Somerville_Et_June_Miles_Kingston) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Comment_te_dire_adieu_(Jimmy_Somerville_Et_June_Miles_Kingston) and didn't work.
+Tried song NAME:"fresh prince" | ENCODE_NAME:Fresh_prince | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Fresh_prince and didn't work.
+Tried song NAME:"le diable ne s'habille plus en prada" | ENCODE_NAME:Le_diable_ne_s'habille_plus_en_prada | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_diable_ne_s'habille_plus_en_prada and didn't work.
+Tried song NAME:"ballade de jim" | ENCODE_NAME:Ballade_de_jim | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ballade_de_jim and didn't work.
+Tried song NAME:"le bagad de lann bihoue" | ENCODE_NAME:Le_bagad_de_lann_bihoue | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_bagad_de_lann_bihoue and didn't work.
+Tried song NAME:"quand j'serai k.-o." | ENCODE_NAME:Quand_j'serai_k.-o. | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Quand_j'serai_k.-o. and didn't work.
+Tried song NAME:"somerset maugham" | ENCODE_NAME:Somerset_maugham | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Somerset_maugham and didn't work.
+Tried song NAME:"ce soir on danse à naziland" | ENCODE_NAME:Ce_soir_on_danse_à_naziland | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ce_soir_on_danse_à_naziland and didn't work.
+Tried song NAME:"la chanson de ziggy" | ENCODE_NAME:La_chanson_de_ziggy | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_chanson_de_ziggy and didn't work.
+Tried song NAME:"les adieux d'un sex-symbol" | ENCODE_NAME:Les_adieux_d'un_sex-symbol | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_adieux_d'un_sex-symbol and didn't work.
+Tried song NAME:"s.o.s. d'un terrien en détresse (daniel balavoine)" | ENCODE_NAME:S.o.s._d'un_terrien_en_détresse_(Daniel_Balavoine) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/S.o.s._d'un_terrien_en_détresse_(Daniel_Balavoine) and didn't work.
+Tried song NAME:"il y a du soleil sur la france" | ENCODE_NAME:Il_y_a_du_soleil_sur_la_france | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Il_y_a_du_soleil_sur_la_france and didn't work.
+Tried song NAME:"made in normandie" | ENCODE_NAME:Made_in_normandie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Made_in_normandie and didn't work.
+Tried song NAME:"strong and beautiful" | ENCODE_NAME:Strong_and_beautiful | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Strong_and_beautiful and didn't work.
+Tried song NAME:"il est où le sav" | ENCODE_NAME:Il_est_où_le_sav | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Il_est_où_le_sav and didn't work.
+Tried song NAME:"ça (c'est vraiment toi)" | ENCODE_NAME:Ça_(C'Est_Vraiment_Toi) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ça_(C'Est_Vraiment_Toi) and didn't work.
+Tried song NAME:"métro (c'est trop)" | ENCODE_NAME:Métro_(C'Est_Trop) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Métro_(C'Est_Trop) and didn't work.
+Tried song NAME:"new york avec toi" | ENCODE_NAME:New_york_avec_toi | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/New_york_avec_toi and didn't work.
+Tried song NAME:"la légende de jimmy" | ENCODE_NAME:La_légende_de_jimmy | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_légende_de_jimmy and didn't work.
+Tried song NAME:"fils de cham" | ENCODE_NAME:Fils_de_cham | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Fils_de_cham and didn't work.
+Tried song NAME:"où est ma chemise grise ?" | ENCODE_NAME:Où_est_ma_chemise_grise_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Où_est_ma_chemise_grise_%3F and didn't work.
+Tried song NAME:"je m'appelle michèle" | ENCODE_NAME:Je_m'appelle_michèle | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Je_m'appelle_michèle and didn't work.
+Tried song NAME:"chanson sur une drôle de vie (tout ce qui brille)" | ENCODE_NAME:Chanson_sur_une_drôle_de_vie_(Tout_Ce_Qui_Brille) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Chanson_sur_une_drôle_de_vie_(Tout_Ce_Qui_Brille) and didn't work.
+Tried song NAME:"rien que des mots (ti amo)" | ENCODE_NAME:Rien_que_des_mots_(Ti_Amo) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Rien_que_des_mots_(Ti_Amo) and didn't work.
+Tried song NAME:"le bon roi dagobert" | ENCODE_NAME:Le_bon_roi_dagobert | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Le_bon_roi_dagobert and didn't work.
+Tried song NAME:"douce france (charles trenet)" | ENCODE_NAME:Douce_france_(Charles_Trenet) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Douce_france_(Charles_Trenet) and didn't work.
+Tried song NAME:"que reste-t-il de nos amours ? (charles trenet)" | ENCODE_NAME:Que_reste-t-il_de_nos_amours_%3F_(Charles_Trenet) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Que_reste-t-il_de_nos_amours_%3F_(Charles_Trenet) and didn't work.
+Tried song NAME:"les prisons de nantes" | ENCODE_NAME:Les_prisons_de_nantes | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_prisons_de_nantes and didn't work.
+Tried song NAME:"elle danse marie" | ENCODE_NAME:Elle_danse_marie | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Elle_danse_marie and didn't work.
+Tried song NAME:"bye-bye leroy brown" | ENCODE_NAME:Bye-bye_leroy_brown | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bye-bye_leroy_brown and didn't work.
+Tried song NAME:"la maritza" | ENCODE_NAME:La_maritza | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_maritza and didn't work.
+Tried song NAME:"qu'est-ce qui fait pleurer les blondes ?" | ENCODE_NAME:Qu'est-ce_qui_fait_pleurer_les_blondes_%3F | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Qu'est-ce_qui_fait_pleurer_les_blondes_%3F and didn't work.
+Tried song NAME:"tout va très bien, madame la marquise" | ENCODE_NAME:Tout_va_très_bien,_madame_la_marquise | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Tout_va_très_bien,_madame_la_marquise and didn't work.
+Tried song NAME:"bella ciao" | ENCODE_NAME:Bella_ciao | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bella_ciao and didn't work.
+Tried song NAME:"xy" | ENCODE_NAME:Xy | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Xy and didn't work.
+Tried song NAME:"amélie colbert" | ENCODE_NAME:Amélie_colbert | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Amélie_colbert and didn't work.
+Tried song NAME:"belle-île-en-mer marie-galante" | ENCODE_NAME:Belle-île-en-mer_marie-galante | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Belle-île-en-mer_marie-galante and didn't work.
+Tried song NAME:"bubble star" | ENCODE_NAME:Bubble_star | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Bubble_star and didn't work.
+Tried song NAME:"karin redinger" | ENCODE_NAME:Karin_redinger | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Karin_redinger and didn't work.
+Tried song NAME:"les nuits sans kim wilde" | ENCODE_NAME:Les_nuits_sans_kim_wilde | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Les_nuits_sans_kim_wilde and didn't work.
+Tried song NAME:"spirit of samba" | ENCODE_NAME:Spirit_of_samba | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Spirit_of_samba and didn't work.
+Tried song NAME:"ps : je t'aime" | ENCODE_NAME:Ps_:_je_t'aime | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Ps_:_je_t'aime and didn't work.
+Tried song NAME:"la chanson de lara" | ENCODE_NAME:La_chanson_de_lara | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/La_chanson_de_lara and didn't work.
+Tried song NAME:"oh lady mary" | ENCODE_NAME:Oh_lady_mary | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Oh_lady_mary and didn't work.
+Tried song NAME:"shame on u" | ENCODE_NAME:Shame_on_u | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Shame_on_u and didn't work.
+Tried song NAME:"on s'fait du mal (zaho et dadju)" | ENCODE_NAME:On_s'fait_du_mal_(Zaho_Et_Dadju) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/On_s'fait_du_mal_(Zaho_Et_Dadju) and didn't work.
+Tried song NAME:"sans chemise sans pantalon (rika zaraï / 45t)" | ENCODE_NAME:Sans_chemise_sans_pantalon_(Rika_Zaraï_/_45T) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sans_chemise_sans_pantalon_(Rika_Zaraï_/_45T) and didn't work.
+Tried song NAME:"sans chemise sans pantalon (rika zaraï / oriental)" | ENCODE_NAME:Sans_chemise_sans_pantalon_(Rika_Zaraï_/_Oriental) | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Sans_chemise_sans_pantalon_(Rika_Zaraï_/_Oriental) and didn't work.
+Tried song NAME:"homme sweet homme" | ENCODE_NAME:Homme_sweet_homme | LINK:https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Homme_sweet_homme and didn't work.
+------------------------------------------------------------------------------------
