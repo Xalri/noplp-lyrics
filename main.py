@@ -30,9 +30,10 @@ def resource_path(relative_path):
     else:
         base_path = os.path.abspath(".")
 
-    return os.path.join(base_path, relative_path)
+    return os.path.join(base_path, relative_path).replace("\\", "/")
 
-sings_dir = resource_path('sings').replace("\\", "/")
+sings_dir = resource_path('sings')
+data_dir = resource_path('data')
 
 
 # sings_dir = "C:/Users/samyt/AppData/Local/Temp/_MMMM/sings"
@@ -460,7 +461,6 @@ def update_lyrics_window(window, lyrics, chunk_index, size):
 def legendWindow():
     
     infos_column = [
-        [sg.Titlebar("Légende", icon="", background_color="#626161", text_color="#fdfdfd")],
         [sg.Column([
         [sg.Text("gras", font=('Helvetica', 11, 'bold'), background_color=BACKGROUND_COLOR, size=(None,1))],
         [sg.Text("texte montré à l'écran ", font=('Helvetica', 10, 'bold'), background_color=BACKGROUND_COLOR, size=(None,1))],
@@ -471,11 +471,11 @@ def legendWindow():
         [sg.Text("orange", font=('Helvetica', 11, "bold"), text_color="Orange", background_color=BACKGROUND_COLOR, size=(None,1))],
         [sg.Text("texte de NOPLP n'existant pas dans la version du chanteur ", font=('Helvetica', 10, "bold"), text_color="Orange", background_color=BACKGROUND_COLOR, size=(None,1))],
         [sg.Text(" ", background_color=BACKGROUND_COLOR, size=(None,1))],
-        [sg.Button("Retour", font=('Helvetica', 10, "bold"), key="-RETURN-", size=(30, 1), border_width=0, button_color=("#878787", "#1b1b1b"))],
+        [sg.Button("Retour", font=('Helvetica', 13, "bold"), key="-RETURN-", size=(30, 1), border_width=0, button_color=("#ffffff", "#181818"))],
         
     ], background_color=BACKGROUND_COLOR, size=(None, None), element_justification='center', expand_x=True, expand_y=True, pad=0)]]
 
-    popup = sg.Window("Légende", infos_column, background_color=BACKGROUND_COLOR, finalize=True, no_titlebar=True, grab_anywhere=True, element_padding=0)
+    popup = sg.Window("Légende", infos_column, background_color=BACKGROUND_COLOR, finalize=True, no_titlebar=True, grab_anywhere=True, element_padding=0, location=(20, 20))
 
 
 
@@ -526,78 +526,6 @@ def createLyricWindow(lyrics):
     size = 22
     # pprint(chunkedLyrics[0])
 
-    #################################################################################################################################################################################################################
-    # for i in range(size):
-    #     lyrics_column.append([])
-    #     currentChunk = chunkedLyrics[current_chunk_index]
-    #     if i >= len(currentChunk) -1:
-    #         for j in range(5):
-    #             lyrics_column[i].append(sg.Text("", font=('Helvetica', 12, ), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, expand_x=False, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + f"#{j+1}-"))
-    #     else:
-    #         line = currentChunk[i]
-    #         if not isinstance(line, list):
-    #             bold = line["bold"]
-    #             italic = line["italic"]
-    #             colored = line["color"]
-    #             text = line["text"]
-
-    #             if italic:
-    #                 if bold:
-    #                     if colored:
-    #                         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", background_color=BACKGROUND_COLOR, key="-LYR " + str(i) + "-"))
-    #                     else:
-    #                         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + "-"))
-    #                 else:
-    #                     if colored:
-    #                         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + "-"))
-    #                     else:
-    #                         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + "-"))
-    #             else:
-    #                 if bold:
-    #                     if colored:
-    #                         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", background_color=BACKGROUND_COLOR, expand_x=False, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + "#1-"))
-    #                     else:
-    #                         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, expand_x=False, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + "#1-"))
-    #                 else:
-    #                     if colored:
-    #                         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + "#1-"))
-    #                     else:
-    #                         lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + "#1-"))
-    #             # for j in range(4):
-    #             #     lyrics_column[i].append(sg.Text("", font=('Helvetica', 12, ), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, expand_x=False, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + f"#{j+2}-"))
-    #         else:
-    #             for i in range(len(line)):
-    #                 subline = line[i]
-    #                 bold = subline["bold"]
-    #                 italic = subline["italic"]
-    #                 colored = subline["color"]
-    #                 text = subline["text"]
-
-    #                 if italic:
-    #                     if bold:
-    #                         if colored:
-    #                             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", background_color=BACKGROUND_COLOR, key="-LYR " + str(i) + "-"))
-    #                         else:
-    #                             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + "-"))
-    #                     else:
-    #                         if colored:
-    #                             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + "-"))
-    #                         else:
-    #                             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + "-"))
-    #                 else:
-    #                     if bold:
-    #                         if colored:
-    #                             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", background_color=BACKGROUND_COLOR, expand_x=False, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + f"#{i+1}-"))
-    #                         else:
-    #                             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, expand_x=False, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + f"#{i+1}-"))
-    #                     else:
-    #                         if colored:
-    #                             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + f"#{i+1}-"))
-    #                         else:
-    #                             lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + f"#{i+1}-"))
-                # for j in range(len(line), 6):
-                #     lyrics_column[i].append(sg.Text("", font=('Helvetica', 12, ), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, expand_x=False, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + f"#{j+2}-"))
-    #################################################################################################################################################################################################################
     for i in range(size):
         lyrics_column.append([])
         for j in range(5):
@@ -620,7 +548,7 @@ def createLyricWindow(lyrics):
     ]
     
 
-    window_lyrics = sg.Window("Lyrics", lyrics_layout, size=(800,600), finalize=True, background_color=BACKGROUND_COLOR)
+    window_lyrics = sg.Window("Lyrics", lyrics_layout, size=(800,600), finalize=True, background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
     # pprint(window_lyrics.AllKeysDict)
     update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
     # pprint(window_lyrics.element_list())
@@ -752,7 +680,7 @@ search_layout = [
 
 # Create the window
 # sg.main()
-window_search = sg.Window("NOPLP lyrics", search_layout, finalize=True, size=(322, 476), background_color=BACKGROUND_COLOR)
+window_search = sg.Window("NOPLP lyrics", search_layout, finalize=True, size=(322, 476), background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
 print(window_search.AllKeysDict)
 
 
@@ -810,11 +738,9 @@ while True:
         
         files = find(values[event] + '*.txt', sings_dir)
         # window_search.write_event_value('-LOCAL SONG LIST-', files)
-        update_listbox(files)
-
-    
+        update_listbox(files)    
     elif len(values[event]) > 0 and event == "-LOCAL SONG LIST-":
-        with open(f'{sings_dir}/{values[event][0]}.txt', 'r') as file:
+        with open(f'{sings_dir}/{values[event][0]}.txt', 'r', encoding="utf-8") as file:
             # Read the entire content of the file
             content = file.read()
             # print(content)
