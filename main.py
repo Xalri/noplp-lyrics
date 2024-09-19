@@ -714,7 +714,7 @@ while True:
             # window_search["-ONLINE SONG LIST-"].update(results)
             update_listbox2(results)
     elif len(values[event]) > 0 and event == "-LOCAL SONG LIST-":
-        with open('./sings/{filename}.txt'.format(filename=values[event][0]), 'r', encoding='utf-8') as file:
+        with open('./sings/{filename}.txt'.format(filename=values[event][0]), 'r') as file:
             # Read the entire content of the file
             content = file.read()
             print(content)
