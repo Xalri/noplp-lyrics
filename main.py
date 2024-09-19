@@ -32,7 +32,9 @@ def resource_path(relative_path):
 
     return os.path.join(base_path, relative_path)
 
-sings_dir = resource_path('sings')
+sings_dir = resource_path('sings').replace("\\", "/")
+# sings_dir = "C:/Users/samyt/AppData/Local/Temp/_MMMM/sings"
+# sings_dir = "C:\\Users\\samyt\\AppData\\Local\\Temp\\_MMMM\\sings".replace("\\", "/")
 
 print(sings_dir)
 
@@ -154,7 +156,7 @@ def getLyrics(title):
     titre = chanson
     url = "https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/" + chanson
     lien = url
-    print(url)
+    # print(url)
     # print("------")
     # print("Url : " + url)
 
@@ -195,7 +197,7 @@ def getLyricsFromlink(link):
     global lien
     url = link
     lien = url
-    print(url)
+    # print(url)
     # print("------")
     # print("Url : " + url)
 
@@ -361,7 +363,7 @@ def chunk_text(text, chunk_size=5):
 
 def update_lyrics_window(window, lyrics, chunk_index, size):
     
-    pprint(lyrics[chunk_index])
+    # pprint(lyrics[chunk_index])
     for i in range(size):
         currentChunk = lyrics[chunk_index]
         for j in range(5):
@@ -373,9 +375,9 @@ def update_lyrics_window(window, lyrics, chunk_index, size):
             # print(i)
             line = currentChunk[i]
             
-            print(line)
-            print(isinstance(line, list))
-            print(" ")
+            # print(line)
+            # print(isinstance(line, list))
+            # print(" ")
 
             if not isinstance(line, list):
                 bold = line["bold"]
@@ -617,7 +619,7 @@ def createLyricWindow(lyrics):
     
 
     window_lyrics = sg.Window("Lyrics", lyrics_layout, size=(800,600), finalize=True, background_color=BACKGROUND_COLOR)
-    pprint(window_lyrics.AllKeysDict)
+    # pprint(window_lyrics.AllKeysDict)
     update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
     # pprint(window_lyrics.element_list())
     # pprint(window_lyrics.AllKeysDict)
@@ -720,6 +722,7 @@ search_layout = [
     [
         sg.Push(background_color=BACKGROUND_COLOR),
         sg.Text("Song Searcher", font=('Verdana', 17, "bold"), text_color="#fdfdfd", background_color=BACKGROUND_COLOR),
+        # sg.Text(str(sings_dir), font=('Verdana', 17, "bold"), text_color="#fdfdfd", background_color=BACKGROUND_COLOR),
         sg.Push(background_color=BACKGROUND_COLOR),
     ],
     [
@@ -766,7 +769,7 @@ round_rectangle(canvas, 0, 0, 292, 394, radius=25, fill=MULTILINE_BACKGROUND)
 
 # Create a Tkinter Listbox and place it inside the rounded rectangle
 listbox = Listbox(canvas, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12), fg=OPTION_COLOR)
-listbox.place(x=10, y=10, width=222, height=374)  # Adjust dimensions based on your layout
+listbox.place(x=10, y=10, width=272, height=374)  # Adjust dimensions based on your layout
 
 
 # Function to simulate PySimpleGUI's event system using the "-LOCAL SONG LIST-" key
@@ -812,7 +815,7 @@ while True:
         with open(f'{sings_dir}/{values[event][0]}.txt', 'r') as file:
             # Read the entire content of the file
             content = file.read()
-            print(content)
+            # print(content)
             # print(content)
         # window_search.close()
         createLyricWindow(content)
