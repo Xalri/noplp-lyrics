@@ -9,7 +9,6 @@ import re
 import tkinter as tk
 from tkinter import Canvas, Listbox
 from time import sleep
-import pyperclip
 import pyautogui
 import sys
 
@@ -459,6 +458,7 @@ def update_lyrics_window(window, lyrics, chunk_index, size):
                                 # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
 
 def legendWindow():
+
     
     infos_column = [
         [sg.Column([
@@ -490,70 +490,45 @@ def legendWindow():
         if event == sg.WIN_CLOSED:
             break
         elif event == "-RETURN-":
-            return popup.close()          
+           return popup.close()
+
 
 def createLyricWindow(lyrics):
     SplitLyrics = lyrics.split("\n")
     lyrics_column = []
     temp = []
     for i in range(len(SplitLyrics)):
-        # pprint(SplitLyrics)
-        # if SplitLyrics[i].startswith(" #"):
-        #     lyrics_column.append([sg.Text(SplitLyrics[i][2:], text_color='grey')])
-        # else:
-        #     lyrics_column.append([sg.Text(SplitLyrics[i])])
-
         n = underline_text_between_underscores(SplitLyrics[i])
-        # for l in n:
-        #     temp.append([l])
         if len(n) ==1:
             temp.append(n[0])
         else:
             temp.append(n)
 
-    # chunkLyrics = chunk_text(temp, 20)
-    # pprint(temp)
-    # print(len(temp))
-    # print("================================")
-    # pprint(temp)
     chunkedLyrics = chunk_text(temp, 20)
     
     nbChunk = len(chunk_text(temp, 20))
-    # print(nbChunk)
-    # print("--------------------------------")
-    # p# print(chunk_text(temp, 20))
     current_chunk_index = 0
     size = 22
-    # pprint(chunkedLyrics[0])
 
     for i in range(size):
         lyrics_column.append([])
         for j in range(5):
                
             lyrics_column[i].append(sg.Text("", font=('Helvetica', 12, ), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, expand_x=False, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + f"#{j+1}-"))
-    # pprint(chunkLyrics)
-    # print(chunkLyrics)
-    # pprint(chunkedLyrics[current_chunk_index])
-    # pprint(len(chunkedLyrics[current_chunk_index]))
-    # pprint(len(lyrics_column))
+
     lyrics_column.append([sg.Button("previous", font=('Helvetica', 10, "bold"), key="-PREV-", size=(None, 1), border_width=0, button_color=("#878787", "#1b1b1b")), sg.Button("Légende", font=('Helvetica', 10, "bold"), key="-LEGEND-", size=(9, 1), border_width=0, button_color=("#878787", "#1b1b1b")), sg.Button("Next", font=('Helvetica', 10, "bold"), key="-NEXT-", size=(None, 1), border_width=0, button_color=("#878787", "#1b1b1b"))])
-    # print(lyrics_column)
 
 
     lyrics_layout = [
         [
             sg.Column(lyrics_column, key="-LYRICS-", background_color=BACKGROUND_COLOR, size=(None, None), justification="center", element_justification="center", expand_y=True, expand_x=True),
-
         ]
     ]
     
 
     window_lyrics = sg.Window("Lyrics", lyrics_layout, size=(800,600), finalize=True, background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
-    # pprint(window_lyrics.AllKeysDict)
     update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
     # pprint(window_lyrics.element_list())
-    # pprint(window_lyrics.AllKeysDict)
-    # pprint(chunkedLyrics)
     while True:
         event, values = window_lyrics.read()
         
@@ -564,9 +539,6 @@ def createLyricWindow(lyrics):
             break
         elif event == "-NEXT-":
             current_chunk_index += 1
-            # print(current_chunk_index)
-            # print(len(chunkedLyrics))
-            # print("--------------------------------")
             update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
             
             # Disable "Next" button if we're at the last chunk
@@ -588,63 +560,6 @@ def createLyricWindow(lyrics):
         elif event == "-LEGEND-":
             legendWindow()
         
-# sings = getSings(1) + getSings(2)
-# # pprint(sings)
-
-# currentSings = find("*.txt", "./sings")
-# sings2 = []
-# for elem in sings:
-#     if "?" in elem or "/" in elem:
-#         sings2.append(elem.replace("/", "%2F").replace("?", "%3F"))
-#     else:
-#         sings2.append(elem)
-
-# # pprint(getLyrics(sings[0]))
-# input()
-# s = 0
-# for sing in sings2:
-#     if not sing in currentSings:
-#         s +=1
-# i = 0
-# for sing in sings2:
-#     if not sing in currentSings:
-#         os.system('cls')
-#         print(f"titre n°{i}/{s}: " + str(sing))
-#         pyperclip.copy(str(sing))
-#         newLink = input("link :")
-#         # try:
-#         if True:
-#             lyrics = getLyricsFromlink(newLink)
-#             print("ok")
-
-#             new = ""
-#             if "\n" in lyrics:
-#                 Split = lyrics.split("\n")
-                
-#                 for line in Split:
-#                     new += str(line.encode("utf-8"))
-#             else:
-#                 new = lyrics
-#             print(new)
-#             # print(new)
-#             try:
-#                 with open("./sings/{filename}.txt".format(filename=sing.replace("?", "%3F").replace("/", "%2F")), 'w', encoding='utf-8') as file:
-#                     # Write content to the file
-#                     file.write(lyrics)
-#             except Exception as e:
-#                 print("writing problem")
-#                 print(e)
-#                 with open("./log.txt", 'a', encoding='utf-8') as file:
-#                     text = f"""Tried song NAME:"{sing}" | ENCODE_NAME:{titre} | LINK:{lien} and didn't work.\n"""
-#                     file.write(text)
-#                 pyautogui.moveTo(100, 150)
-#                 input()
-#         # except Exception as e:
-#         #     print("problem")
-#         #     print(e)
-#         #     input()
-        
-#         i += 1
 
 
 
@@ -652,7 +567,6 @@ search_layout = [
     [
         sg.Push(background_color=BACKGROUND_COLOR),
         sg.Text("Song Searcher", font=('Verdana', 17, "bold"), text_color="#fdfdfd", background_color=BACKGROUND_COLOR),
-        # sg.Text(str(sings_dir), font=('Verdana', 17, "bold"), text_color="#fdfdfd", background_color=BACKGROUND_COLOR),
         sg.Push(background_color=BACKGROUND_COLOR),
     ],
     [
@@ -661,25 +575,11 @@ search_layout = [
         sg.Push(background_color=BACKGROUND_COLOR),
     ],
     [
-        sg.Canvas(key="-CANVAS-", size=(272, 374), background_color=MULTILINE_BACKGROUND),
-        # sg.Canvas(key="-CANVAS-", size=(100, 50), background_color=MULTILINE_BACKGROUND),
-        
+        sg.Canvas(key="-CANVAS-", size=(272, 374), background_color=MULTILINE_BACKGROUND),        
     ],
 ]
 
 
-
-# layout = [
-#     [
-#         sg.Column(search_layout, size=(322, 476)),
-
-#     ]
-# ]
-
-# sg.theme_background_color(BACKGROUND_COLOR)
-
-# Create the window
-# sg.main()
 window_search = sg.Window("NOPLP lyrics", search_layout, finalize=True, size=(322, 476), background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
 print(window_search.AllKeysDict)
 
@@ -737,17 +637,12 @@ while True:
     elif len(values[event]) > 0 and event == "-SONG-":
         
         files = find(values[event] + '*.txt', sings_dir)
-        # window_search.write_event_value('-LOCAL SONG LIST-', files)
         update_listbox(files)    
     elif len(values[event]) > 0 and event == "-LOCAL SONG LIST-":
         with open(f'{sings_dir}/{values[event][0]}.txt', 'r', encoding="utf-8") as file:
             # Read the entire content of the file
             content = file.read()
-            # print(content)
-            # print(content)
-        # window_search.close()
         createLyricWindow(content)
     
 
 
-# title = urllib.parse.quote(input("Titre : \n"))
