@@ -1,5 +1,3 @@
-
- 
  " Bon c'est l'heure où les souvenirs se ramènent
  Juste quand l'sommeil se met en grève
  Le blues en profite pour s'installer

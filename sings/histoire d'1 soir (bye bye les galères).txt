@@ -1,5 +1,3 @@
-
- 
  #Qu'est-ce que tu fais ce soir
  #T'as un rencart ou tu viens dîner chez Edgard
  #Bon c'est d'accord, tu me rappelles

@@ -1,5 +1,3 @@
-
- 
  Tic-tac   x 4
  Je suis seul et j’entends tic-tac tic-tac   x 2
  Je suis seul et j’attends

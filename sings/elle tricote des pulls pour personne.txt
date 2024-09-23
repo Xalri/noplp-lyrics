@@ -1,5 +1,3 @@
-
- 
  #Elle rate l'avion de ligne de la Koweit
  #Mais, comme tu l'imagines, elle loue un jet
  #D'où on la branche direct avec Wall Street

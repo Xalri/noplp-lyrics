@@ -1,5 +1,3 @@
-
- 
  x 2
  Hé, hé, redis-moi où t'étais
  Quand pour moi, tout était difficile

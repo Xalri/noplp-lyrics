@@ -11,6 +11,7 @@ from tkinter import Canvas, Listbox
 from time import sleep
 import sys
 from pygame import mixer
+from pathlib import Path
 
 mixer.init()
 
@@ -43,6 +44,9 @@ def getPath():
 def writePath(path):
     with open(f"{data_dir}/path", "w") as f:
         f.write(path)
+
+def check_file_exists(file_path):
+    return Path(file_path).exists()
 
 def remove_ansi_escape_codes(text):
     ansi_escape = re.compile(r'\x1b\[.*?m')
@@ -498,6 +502,8 @@ def legendWindow():
 
 
 def createLyricWindow(lyrics, title):
+    musicPath = f"{getPath()}/{title}.mp3"
+    fileExist = check_file_exists(musicPath)
     SplitLyrics = lyrics.split("\n")
     lyrics_column = []
     temp = []
@@ -521,6 +527,8 @@ def createLyricWindow(lyrics, title):
             lyrics_column[i].append(sg.Text("", font=('Helvetica', 12, ), text_color=OPTION_COLOR, background_color=BACKGROUND_COLOR, expand_x=False, pad=(0,0), size=(None, 1), key="-LYR " + str(i) + f"#{j+1}-"))
 
     lyrics_column.append([sg.Button("previous", font=('Helvetica', 10, "bold"), key="-PREV-", size=(None, 1), border_width=0, button_color=("#878787", "#1b1b1b")), sg.Button("Légende", font=('Helvetica', 10, "bold"), key="-LEGEND-", size=(9, 1), border_width=0, button_color=("#878787", "#1b1b1b")), sg.Button("Next", font=('Helvetica', 10, "bold"), key="-NEXT-", size=(None, 1), border_width=0, button_color=("#878787", "#1b1b1b"))])
+    if fileExist:
+        lyrics_column.append([sg.Button(image_filename=f"{data_dir}/pause.png", image_size=(50, 50), key="-PAUSE-", size=(None, 1), border_width=0, button_color=("#878787", BACKGROUND_COLOR)), sg.Slider(range=(0, 100), text_color=TEXT_COLOR, trough_color="#1b1b1b", background_color=BACKGROUND_COLOR, default_value=50, size=(20, 15), orientation='h', key='-VOLUME-', enable_events=True)])
 
 
     lyrics_layout = [
@@ -529,13 +537,14 @@ def createLyricWindow(lyrics, title):
         ]
     ]
     
-    musicPath = f"{getPath()}/{title}.mp3"
-    print(musicPath)
-    mixer.music.load(musicPath)
-    # mixer.music.play()
+    if fileExist:
+        print(musicPath)
+        mixer.music.load(musicPath)
+        mixer.music.play()
     window_lyrics = sg.Window("Lyrics", lyrics_layout, size=(800,600), finalize=True, background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
     update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
     # pprint(window_lyrics.element_list())
+    isPaused = False
     while True:
         event, values = window_lyrics.read()
         
@@ -543,6 +552,7 @@ def createLyricWindow(lyrics, title):
         # End program if user closes window_search or
         # presses the OK button
         if event == "OK" or event == sg.WIN_CLOSED:
+            mixer.music.unload()
             break
         elif event == "-NEXT-":
             current_chunk_index += 1
@@ -566,7 +576,18 @@ def createLyricWindow(lyrics, title):
             window_lyrics['-NEXT-'].update(disabled=False)
         elif event == "-LEGEND-":
             legendWindow()
-        
+        elif event == "-PAUSE-":
+            if isPaused:
+                window_lyrics["-PAUSE-"].update(image_filename=f"{data_dir}/pause.png")
+                mixer.music.unpause()
+                isPaused = False
+            else:
+                window_lyrics["-PAUSE-"].update(image_filename=f"{data_dir}/play.png")
+                mixer.music.pause()
+                isPaused = True
+        elif event == "-VOLUME-":
+            volume = values["-VOLUME-"] / 100  # Convert slider value (0-100) to volume (0.0-1.0)
+            mixer.music.set_volume(volume)        
 
 def main():
     default = getPath()
@@ -662,28 +683,29 @@ def main():
             writePath(values[event])
 
 
-# main()
+main()
 
-def clean_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
+# def clean_file(file_path):
+#     with open(file_path, 'r', encoding='utf-8') as f:
+#         lines = f.readlines()
 
-    # Remove leading empty or space-only lines
-    cleaned_lines = []
-    found_text = False
-    for line in lines:
-        if not found_text:
-            # Check if the line is either "" or only contains spaces
-            if line.strip() != "":
-                found_text = True
-                cleaned_lines.append(line)  # Add the first non-empty line
-        else:
-            cleaned_lines.append(line)  # Add the rest of the lines
+#     # Remove leading empty or space-only lines
+#     cleaned_lines = []
+#     found_text = False
+#     for line in lines:
+#         if not found_text:
+#             # Check if the line is either "" or only contains spaces
+#             if line.strip() != "":
+#                 found_text = True
+#                 cleaned_lines.append(line)  # Add the first non-empty line
+#         else:
+#             cleaned_lines.append(line)  # Add the rest of the lines
 
-    # Write the cleaned content back to the file
-    with open(file_path, 'w', encoding='utf-8') as f:
-        f.writelines(cleaned_lines)
+#     # Write the cleaned content back to the file
+#     with open(file_path, 'w', encoding='utf-8') as f:
+#         f.writelines(cleaned_lines)
 
-for title in find('*.txt', sings_dir):
-    clean_file(f"{sings_dir}/{title}.mp3")
-# clean_file(f"{sings_dir}/1er gaou.txt")
+# for title in find('*.txt', sings_dir):
+#     clean_file(f"{sings_dir}/{title.replace('/', '%2F').replace('?', '%3F')}.txt")
+
+# # clean_file(f"{sings_dir}/1er gaou.txt")

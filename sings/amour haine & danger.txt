@@ -1,5 +1,3 @@
-
- 
  Hey
  Tout ça dans un objet
  Encore faut-il qu'il soit bien chargé

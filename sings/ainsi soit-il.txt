@@ -1,5 +1,3 @@
-
- 
  L’action se déroule dans ta ville
  Vue d’hélicoptère ou du haut d’un building
  Et puis la caméra zoom avant

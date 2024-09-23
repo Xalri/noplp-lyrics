@@ -1,5 +1,3 @@
-
- 
  #<u>Partie parlée par Fabien mais non affichée sur l'écran</u>
  #Musique
  #Ma chère mademoiselle
