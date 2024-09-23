@@ -10,6 +10,9 @@ import tkinter as tk
 from tkinter import Canvas, Listbox
 from time import sleep
 import sys
+from pygame import mixer
+
+mixer.init()
 
 
 
@@ -35,7 +38,6 @@ data_dir = resource_path('data')
 def getPath():
     with open(f"{data_dir}/path", "r") as f:
         res = f.readline()
-        print(res)
         return res
 
 def writePath(path):
@@ -495,7 +497,7 @@ def legendWindow():
            return popup.close()
 
 
-def createLyricWindow(lyrics):
+def createLyricWindow(lyrics, title):
     SplitLyrics = lyrics.split("\n")
     lyrics_column = []
     temp = []
@@ -527,7 +529,10 @@ def createLyricWindow(lyrics):
         ]
     ]
     
-
+    musicPath = f"{getPath()}/{title}.mp3"
+    print(musicPath)
+    mixer.music.load(musicPath)
+    # mixer.music.play()
     window_lyrics = sg.Window("Lyrics", lyrics_layout, size=(800,600), finalize=True, background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
     update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
     # pprint(window_lyrics.element_list())
@@ -563,97 +568,122 @@ def createLyricWindow(lyrics):
             legendWindow()
         
 
+def main():
+    default = getPath()
 
-default = getPath()
 
-
-search_layout = [
-    [
-        sg.Push(background_color=BACKGROUND_COLOR),
-        sg.Text("Song Searcher", font=('Verdana', 17, "bold"), text_color="#fdfdfd", background_color=BACKGROUND_COLOR),
-        sg.Push(background_color=BACKGROUND_COLOR),
-    ],
-    [
-        sg.Push(background_color=BACKGROUND_COLOR),
-        sg.In(size=(25, 1), enable_events=True, key="-SONG-", background_color=INPUT_BACKGROUND, text_color="#bcafbf", border_width=0),
-        sg.Push(background_color=BACKGROUND_COLOR),
-    ],
-    [
-        sg.Canvas(key="-CANVAS-", size=(272, 374), background_color=MULTILINE_BACKGROUND),        
-    ],
-    [
-        sg.Text("Audio folder", font=('Verdana', 10, "bold"), text_color="#fdfdfd", background_color=BACKGROUND_COLOR),
-        sg.In(size=(16,1), enable_events=True ,key='-FOLDER-', default_text=default), 
-        sg.FolderBrowse(font=('Helvetica', 13, "bold"), button_color=("#ffffff", "#181818"), size=(None, 1))
+    search_layout = [
+        [
+            sg.Push(background_color=BACKGROUND_COLOR),
+            sg.Text("Song Searcher", font=('Verdana', 17, "bold"), text_color="#fdfdfd", background_color=BACKGROUND_COLOR),
+            sg.Push(background_color=BACKGROUND_COLOR),
+        ],
+        [
+            sg.Push(background_color=BACKGROUND_COLOR),
+            sg.In(size=(25, 1), enable_events=True, key="-SONG-", background_color=INPUT_BACKGROUND, text_color="#bcafbf", border_width=0),
+            sg.Push(background_color=BACKGROUND_COLOR),
+        ],
+        [
+            sg.Canvas(key="-CANVAS-", size=(272, 374), background_color=MULTILINE_BACKGROUND),        
+        ],
+        [
+            sg.Text("Audio folder", font=('Verdana', 10, "bold"), text_color="#fdfdfd", background_color=BACKGROUND_COLOR),
+            sg.In(size=(16,1), enable_events=True ,key='-FOLDER-', default_text=default), 
+            sg.FolderBrowse(font=('Helvetica', 13, "bold"), button_color=("#ffffff", "#181818"), size=(None, 1))
+        ]
     ]
-]
 
 
-window_search = sg.Window("NOPLP lyrics", search_layout, finalize=True, size=(322, 501), background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
-print(window_search.AllKeysDict)
-
-
-
-
-
-############################################### LISTBOX LOCAL 
-# Access the Tkinter canvas through PySimpleGUI
-canvas_elem = window_search['-CANVAS-'].TKCanvas
-# canvas = Canvas(canvas_elem, highlightthickness=0, bg='#64778d')
-canvas = Canvas(canvas_elem, height=394, highlightthickness=0, bg=BACKGROUND_COLOR)
-canvas.pack(fill='both', expand=False)
-
-# Draw rounded rectangle for the listbox
-round_rectangle(canvas, 0, 0, 292, 394, radius=25, fill=MULTILINE_BACKGROUND)
-
-# Create a Tkinter Listbox and place it inside the rounded rectangle
-listbox = Listbox(canvas, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12), fg=OPTION_COLOR)
-listbox.place(x=10, y=10, width=272, height=374)  # Adjust dimensions based on your layout
-
-
-# Function to simulate PySimpleGUI's event system using the "-LOCAL SONG LIST-" key
-def on_select(event):
-    selected_indices = listbox.curselection()  # Get selected items
-    selected_songs = [listbox.get(i) for i in selected_indices]  # Get values of selected items
-    # Send event to PySimpleGUI
-    window_search.write_event_value('-LOCAL SONG LIST-', selected_songs)
-
-def update_listbox(new_values):
-    listbox.delete(0, tk.END)  # Clear current items
-    for item in new_values:
-        listbox.insert(tk.END, item)  # Insert new items
-# Bind the listbox selection to the event handler
-listbox.bind('<<ListboxSelect>>', on_select)
-
-
-
-files = find('*.txt', sings_dir)
-# window_search.write_event_value('-LOCAL SONG LIST-', files)
-update_listbox(files)
+    window_search = sg.Window("NOPLP lyrics", search_layout, finalize=True, size=(322, 501), background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
+    print(window_search.AllKeysDict)
 
 
 
 
 
-# Create an event loop
-while True:
-    event, values = window_search.read()
-    # print(event)
-    # End program if user closes window_search or
-    # presses the OK button
-    if event == "OK" or event == sg.WIN_CLOSED:
-        break
-    elif len(values[event]) > 0 and event == "-SONG-":
-        
-        files = find(values[event] + '*.txt', sings_dir)
-        update_listbox(files)    
-    elif len(values[event]) > 0 and event == "-LOCAL SONG LIST-":
-        with open(f'{sings_dir}/{values[event][0]}.txt', 'r', encoding="utf-8") as file:
-            # Read the entire content of the file
-            content = file.read()
-        createLyricWindow(content)
-    elif len(values[event]) > 0 and event == "-FOLDER-":
-        print(values[event])
-        writePath(values[event])
+    ############################################### LISTBOX LOCAL 
+    # Access the Tkinter canvas through PySimpleGUI
+    canvas_elem = window_search['-CANVAS-'].TKCanvas
+    # canvas = Canvas(canvas_elem, highlightthickness=0, bg='#64778d')
+    canvas = Canvas(canvas_elem, height=394, highlightthickness=0, bg=BACKGROUND_COLOR)
+    canvas.pack(fill='both', expand=False)
+
+    # Draw rounded rectangle for the listbox
+    round_rectangle(canvas, 0, 0, 292, 394, radius=25, fill=MULTILINE_BACKGROUND)
+
+    # Create a Tkinter Listbox and place it inside the rounded rectangle
+    listbox = Listbox(canvas, bg=MULTILINE_BACKGROUND, bd=0, highlightthickness=0, activestyle='none', font=('Helvetica', 12), fg=OPTION_COLOR)
+    listbox.place(x=10, y=10, width=272, height=374)  # Adjust dimensions based on your layout
 
 
+    # Function to simulate PySimpleGUI's event system using the "-LOCAL SONG LIST-" key
+    def on_select(event):
+        selected_indices = listbox.curselection()  # Get selected items
+        selected_songs = [listbox.get(i) for i in selected_indices]  # Get values of selected items
+        # Send event to PySimpleGUI
+        window_search.write_event_value('-LOCAL SONG LIST-', selected_songs)
+
+    def update_listbox(new_values):
+        listbox.delete(0, tk.END)  # Clear current items
+        for item in new_values:
+            listbox.insert(tk.END, item)  # Insert new items
+    # Bind the listbox selection to the event handler
+    listbox.bind('<<ListboxSelect>>', on_select)
+
+
+
+    files = find('*.txt', sings_dir)
+    # window_search.write_event_value('-LOCAL SONG LIST-', files)
+    update_listbox(files)
+
+
+
+
+
+    # Create an event loop
+    while True:
+        event, values = window_search.read()
+        # print(event)
+        # End program if user closes window_search or
+        # presses the OK button
+        if event == "OK" or event == sg.WIN_CLOSED:
+            break
+        elif len(values[event]) > 0 and event == "-SONG-":
+            
+            files = find(values[event] + '*.txt', sings_dir)
+            update_listbox(files)    
+        elif len(values[event]) > 0 and event == "-LOCAL SONG LIST-":
+            with open(f'{sings_dir}/{values[event][0]}.txt', 'r', encoding="utf-8") as file:
+                # Read the entire content of the file
+                content = file.read()
+            createLyricWindow(content, values[event][0])
+        elif len(values[event]) > 0 and event == "-FOLDER-":
+            print(values[event])
+            writePath(values[event])
+
+
+# main()
+
+def clean_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    # Remove leading empty or space-only lines
+    cleaned_lines = []
+    found_text = False
+    for line in lines:
+        if not found_text:
+            # Check if the line is either "" or only contains spaces
+            if line.strip() != "":
+                found_text = True
+                cleaned_lines.append(line)  # Add the first non-empty line
+        else:
+            cleaned_lines.append(line)  # Add the rest of the lines
+
+    # Write the cleaned content back to the file
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.writelines(cleaned_lines)
+
+# for title in find('*.txt', sings_dir):
+#     with open(f'{sings_dir}/{title}.txt', '', encoding="utf-8") as file:
+clean_file(f"{sings_dir}/1er gaou.txt")
