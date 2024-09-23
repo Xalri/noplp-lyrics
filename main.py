@@ -684,6 +684,6 @@ def clean_file(file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
         f.writelines(cleaned_lines)
 
-# for title in find('*.txt', sings_dir):
-#     with open(f'{sings_dir}/{title}.txt', '', encoding="utf-8") as file:
-clean_file(f"{sings_dir}/1er gaou.txt")
+for title in find('*.txt', sings_dir):
+    clean_file(f"{sings_dir}/{title}.mp3")
+# clean_file(f"{sings_dir}/1er gaou.txt")
