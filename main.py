@@ -8,10 +8,12 @@ import html
 import re
 import tkinter as tk
 from tkinter import Canvas, Listbox
-from time import sleep
+from time import sleep, strftime, gmtime
 import sys
 from pygame import mixer
 from pathlib import Path
+import librosa
+import asyncio
 
 mixer.init()
 
@@ -528,7 +530,11 @@ def createLyricWindow(lyrics, title):
 
     lyrics_column.append([sg.Button("previous", font=('Helvetica', 10, "bold"), key="-PREV-", size=(None, 1), border_width=0, button_color=("#878787", "#1b1b1b")), sg.Button("Légende", font=('Helvetica', 10, "bold"), key="-LEGEND-", size=(9, 1), border_width=0, button_color=("#878787", "#1b1b1b")), sg.Button("Next", font=('Helvetica', 10, "bold"), key="-NEXT-", size=(None, 1), border_width=0, button_color=("#878787", "#1b1b1b"))])
     if fileExist:
-        lyrics_column.append([sg.Button(image_filename=f"{data_dir}/pause.png", image_size=(50, 50), key="-PAUSE-", size=(None, 1), border_width=0, button_color=("#878787", BACKGROUND_COLOR)), sg.Slider(range=(0, 100), text_color=TEXT_COLOR, trough_color="#1b1b1b", background_color=BACKGROUND_COLOR, default_value=50, size=(20, 15), orientation='h', key='-VOLUME-', enable_events=True)])
+        duration = int(librosa.get_duration(path=musicPath))
+        durationTime = strftime("%H:%M:%S", gmtime(duration
+                                                   ))
+        print(duration)
+        lyrics_column.append([sg.Slider(range=(0, duration), text_color=TEXT_COLOR, trough_color="#1b1b1b", background_color=BACKGROUND_COLOR, default_value=0, size=(20, 15), orientation='h', key='-TIME-', enable_events=True), sg.Button(image_filename=f"{data_dir}/pause.png", image_size=(50, 50), key="-PAUSE-", size=(None, 1), border_width=0, button_color=("#878787", BACKGROUND_COLOR)), sg.Slider(range=(0, 100), text_color=TEXT_COLOR, trough_color="#1b1b1b", background_color=BACKGROUND_COLOR, default_value=30, size=(20, 15), orientation='h', key='-VOLUME-', enable_events=True)])
 
 
     lyrics_layout = [
@@ -539,14 +545,21 @@ def createLyricWindow(lyrics, title):
     
     if fileExist:
         print(musicPath)
+        
         mixer.music.load(musicPath)
         mixer.music.play()
+        mixer.music.set_volume(0.3)
     window_lyrics = sg.Window("Lyrics", lyrics_layout, size=(800,600), finalize=True, background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
     update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
     # pprint(window_lyrics.element_list())
     isPaused = False
+    prev = 0
     while True:
-        event, values = window_lyrics.read()
+        event, values = window_lyrics.read(timeout=100)
+        # event, values = window_lyrics.read()
+        currentTime = int(mixer.music.get_pos()/1000)
+        
+
         
         # print(event)
         # End program if user closes window_search or
@@ -577,6 +590,7 @@ def createLyricWindow(lyrics, title):
         elif event == "-LEGEND-":
             legendWindow()
         elif event == "-PAUSE-":
+            print(currentTime)
             if isPaused:
                 window_lyrics["-PAUSE-"].update(image_filename=f"{data_dir}/pause.png")
                 mixer.music.unpause()
@@ -588,7 +602,19 @@ def createLyricWindow(lyrics, title):
         elif event == "-VOLUME-":
             volume = values["-VOLUME-"] / 100  # Convert slider value (0-100) to volume (0.0-1.0)
             mixer.music.set_volume(volume)        
-
+        elif event == "-TIME-":
+            mixer.music.set_pos(values["-TIME-"])
+            prev = int(values["-TIME-"]) -1
+            currentTime = int(values["-TIME-"])
+            print(int(values["-TIME-"]))
+        else:
+            if prev == currentTime -1:
+                print("current time : " + str(currentTime))
+                print("prev time : " + str(prev))
+                prev = currentTime
+                window_lyrics["-TIME-"].update(value=currentTime)
+            elif prev != currentTime:
+                prev = currentTime
 def main():
     default = getPath()
 
@@ -681,7 +707,6 @@ def main():
         elif len(values[event]) > 0 and event == "-FOLDER-":
             print(values[event])
             writePath(values[event])
-
 
 main()
 
