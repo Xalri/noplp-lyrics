@@ -9,11 +9,9 @@ import re
 import tkinter as tk
 from tkinter import Canvas, Listbox
 from time import sleep
-import pyautogui
 import sys
 
 
-# Example usage to get the path to a file in the 'sings' directory
 
 BACKGROUND_COLOR = '#2a2a2a'
 TEXT_COLOR = '#ffffff'
@@ -34,11 +32,15 @@ def resource_path(relative_path):
 sings_dir = resource_path('sings')
 data_dir = resource_path('data')
 
+def getPath():
+    with open(f"{data_dir}/path", "r") as f:
+        res = f.readline()
+        print(res)
+        return res
 
-# sings_dir = "C:/Users/samyt/AppData/Local/Temp/_MMMM/sings"
-# sings_dir = "C:\\Users\\samyt\\AppData\\Local\\Temp\\_MMMM\\sings".replace("\\", "/")
-
-print(sings_dir)
+def writePath(path):
+    with open(f"{data_dir}/path", "w") as f:
+        f.write(path)
 
 def remove_ansi_escape_codes(text):
     ansi_escape = re.compile(r'\x1b\[.*?m')
@@ -562,6 +564,8 @@ def createLyricWindow(lyrics):
         
 
 
+default = getPath()
+
 
 search_layout = [
     [
@@ -577,10 +581,15 @@ search_layout = [
     [
         sg.Canvas(key="-CANVAS-", size=(272, 374), background_color=MULTILINE_BACKGROUND),        
     ],
+    [
+        sg.Text("Audio folder", font=('Verdana', 10, "bold"), text_color="#fdfdfd", background_color=BACKGROUND_COLOR),
+        sg.In(size=(16,1), enable_events=True ,key='-FOLDER-', default_text=default), 
+        sg.FolderBrowse(font=('Helvetica', 13, "bold"), button_color=("#ffffff", "#181818"), size=(None, 1))
+    ]
 ]
 
 
-window_search = sg.Window("NOPLP lyrics", search_layout, finalize=True, size=(322, 476), background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
+window_search = sg.Window("NOPLP lyrics", search_layout, finalize=True, size=(322, 501), background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
 print(window_search.AllKeysDict)
 
 
@@ -643,6 +652,8 @@ while True:
             # Read the entire content of the file
             content = file.read()
         createLyricWindow(content)
-    
+    elif len(values[event]) > 0 and event == "-FOLDER-":
+        print(values[event])
+        writePath(values[event])
 
 
