@@ -168,9 +168,6 @@ def getLyrics(title):
     titre = chanson
     url = "https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/" + chanson
     lien = url
-    # print(url)
-    # print("------")
-    # print("Url : " + url)
 
 
     reponse = requests.get(url)
@@ -200,18 +197,12 @@ def getLyrics(title):
             newParoles += remove_ansi_escape_codes(parolesSplit[i])
         else:
             newParoles += remove_ansi_escape_codes("\n {line}".format(line=parolesSplit[i]))
-    # print(newParoles)
-    # print(len())
-    # print("------")
     return newParoles
 
 def getLyricsFromlink(link):
     global lien
     url = link
     lien = url
-    # print(url)
-    # print("------")
-    # print("Url : " + url)
 
 
     reponse = requests.get(url)
@@ -244,9 +235,6 @@ def getLyricsFromlink(link):
             newParoles += remove_ansi_escape_codes(parolesSplit[i])
         else:
             newParoles += remove_ansi_escape_codes("\n {line}".format(line=parolesSplit[i]))
-    # print(newParoles)
-    # print(len())
-    # print("------")
     return newParoles
 
 def getSings(part):
@@ -257,9 +245,7 @@ def getSings(part):
         paroles = reponse.text.split("""<h2><span class="mw-headline" id="Chiffre"><big><b>Chiffre</b></big></span></h2>
 <h3><span class="mw-headline" id="113"><b>113</b></span></h3>""")[1].split("""<p><br /><a href="/fr/wiki/Listes_des_chansons_existantes_(de_la_lettre_N_%C3%A0_la_lettre_Z)" class="mw-redirect" title="Listes des chansons existantes (de la lettre N à la lettre Z)"><b>Pour aller à la liste des chansons existantes de N à Z</b></a>
 </p></div>""")[0]
-        # print("part 1")
     elif part == 2:
-        # print("part 2")
         url = "https://n-oubliez-pas-les-paroles.fandom.com/fr/wiki/Listes_des_chansons_existantes_(de_la_lettre_N_%C3%A0_la_lettre_Z)"
         reponse = requests.get(url)
         paroles = reponse.text.split("""<h2><span class="mw-headline" id="N"><b><big>N</big></b></span></h2>
@@ -268,26 +254,10 @@ def getSings(part):
 </p>""")[0]
     else:
         raise ValueError("Invalid input. Please enter either 1 or 2.")
-    # print("Url : " + url)
 
 
 
     parolesSplit = paroles.split("\n")
-    # test = paroles.split("""<h3><span class="mw-headline" id=""")[1].split("<b>")[1].split("\n")
-    # print(test)
-    # testlist = []
-    # title = html.unescape(test[0].split("</b")[0])
-    # print(title)
-    # for sings in test[1:]:
-    #     if not sings == "":
-    #         # print(sings)
-    #         # print(sings.split('title="')[1].split('">')[0])
-    #         testlist.append({"songTitle": sings.split('title="')[1].split('">')[0], "artistTitle":decode_escape_sequences(title)})
-    # print(testlist)
-    # print(testlist[0]["artistTitle"])
-    # print("----------------------------------------------------------------")
-    # print(" ")
-    # d
     result = []
     for i in range(len(parolesSplit)):
         if not parolesSplit[i] == "" and "href=" in parolesSplit[i]:
@@ -306,14 +276,12 @@ def find(pattern, path):
     return result
 
 def chunk_text(text, chunk_size=5):
-    # pprint(text)
     
     result = []
 
     for _ in range(7):
         index = 0
         for i in range(len(text)):
-            # print(text[i][0])
             if i == chunk_size:
                 break
             if not isinstance(text[i], list):
@@ -324,8 +292,6 @@ def chunk_text(text, chunk_size=5):
         if index == 0:
             custom = False
             notFound = chunk_size
-            # print("not found")
-            # print("test2")
             
             while index == 0:
                 # print("----")
@@ -351,7 +317,6 @@ def chunk_text(text, chunk_size=5):
                 else:
                     index = 999
                     # print(result)
-        # print("ok")
         if index != 999:
             if not custom :
                 result.append([t for t in text[:index]])
@@ -367,15 +332,11 @@ def chunk_text(text, chunk_size=5):
             i = i -1
     for _ in range(removed):
         result.remove([])
-    # for elem in result:
-        # pprint(elem)
-        # print("_______________________")
 
     return result
 
 def update_lyrics_window(window, lyrics, chunk_index, size):
     
-    # pprint(lyrics[chunk_index])
     for i in range(size):
         currentChunk = lyrics[chunk_index]
         for j in range(5):
@@ -384,12 +345,8 @@ def update_lyrics_window(window, lyrics, chunk_index, size):
             for j in range(5):
                 window["-LYR " + str(i) + f"#{j+1}-"].update(" ")
         else:
-            # print(i)
             line = currentChunk[i]
             
-            # print(line)
-            # print(isinstance(line, list))
-            # print(" ")
 
             if not isinstance(line, list):
                 bold = line["bold"]
@@ -401,32 +358,24 @@ def update_lyrics_window(window, lyrics, chunk_index, size):
                     if bold:
                         if colored:
                             window["-LYR " + str(i) + "#1-"].update(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange")
-                            # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                         else:
                             window["-LYR " + str(i) + "#1-"].update(text, font=('Helvetica', 12, 'bold italic'), text_color=OPTION_COLOR)
-                            # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
                         if colored:
                             window["-LYR " + str(i) + "#1-"].update(text, font=('Helvetica', 12, 'italic'), text_color="Orange")
-                            # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                         else:
                             window["-LYR " + str(i) + "#1-"].update(text, font=('Helvetica', 12, 'italic'), text_color=OPTION_COLOR)
-                            # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                 else:
                     if bold:
                         if colored:
                             window["-LYR " + str(i) + "#1-"].update(text, font=('Helvetica', 12, 'bold'), text_color="Orange")
-                            # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                         else:
                             window["-LYR " + str(i) + "#1-"].update(text, font=('Helvetica', 12, 'bold'), text_color=OPTION_COLOR)
-                            # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
                         if colored:
                             window["-LYR " + str(i) + "#1-"].update(text, font=('Helvetica', 12), text_color="Orange")
-                            # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                         else:
                             window["-LYR " + str(i) + "#1-"].update(text, font=('Helvetica', 12), text_color=OPTION_COLOR)
-                            # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                 
             else:
                 for k in range(len(line)):
@@ -440,32 +389,24 @@ def update_lyrics_window(window, lyrics, chunk_index, size):
                         if bold:
                             if colored:
                                 window["-LYR " + str(i) + f"#{k+1}-"].update(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange")
-                                # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                             else:
                                 window["-LYR " + str(i) + f"#{k+1}-"].update(text, font=('Helvetica', 12, 'bold italic'), text_color=OPTION_COLOR)
-                                # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                         else:
                             if colored:
                                 window["-LYR " + str(i) + f"#{k+1}-"].update(text, font=('Helvetica', 12, 'italic'), text_color="Orange")
-                                # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                             else:
                                 window["-LYR " + str(i) + f"#{k+1}-"].update(text, font=('Helvetica', 12, 'italic'), text_color=OPTION_COLOR)
-                                # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'italic'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                     else:
                         if bold:
                             if colored:
                                 window["-LYR " + str(i) + f"#{k+1}-"].update(text, font=('Helvetica', 12, 'bold'), text_color="Orange")
-                                # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                             else:
                                 window["-LYR " + str(i) + f"#{k+1}-"].update(text, font=('Helvetica', 12, 'bold'), text_color=OPTION_COLOR)
-                                # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12, 'bold'), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                         else:
                             if colored:
                                 window["-LYR " + str(i) + f"#{k+1}-"].update(text, font=('Helvetica', 12), text_color="Orange")
-                                # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), text_color="Orange", pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
                             else:
                                 window["-LYR " + str(i) + f"#{k+1}-"].update(text, font=('Helvetica', 12), text_color=OPTION_COLOR)
-                                # lyrics_column[i].append(sg.Text(text, font=('Helvetica', 12), pad=(0,0), size=(None, 1), expand_x=True, key="-LYR " + str(i) + "-"))
 
 def legendWindow():
 
@@ -491,9 +432,6 @@ def legendWindow():
 
 
 
-    # print(popup.get_scaling())
-    # print(popup.get_screen_dimensions())
-    # print(popup.get_screen_size())
 
     while True:
         event, values = popup.read()
@@ -551,17 +489,14 @@ def createLyricWindow(lyrics, title):
         mixer.music.set_volume(0.3)
     window_lyrics = sg.Window("Lyrics", lyrics_layout, size=(800,600), finalize=True, background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
     update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
-    # pprint(window_lyrics.element_list())
     isPaused = False
     prev = 0
     while True:
         event, values = window_lyrics.read(timeout=100)
-        # event, values = window_lyrics.read()
         currentTime = int(mixer.music.get_pos()/1000)
         
 
         
-        # print(event)
         # End program if user closes window_search or
         # presses the OK button
         if event == "OK" or event == sg.WIN_CLOSED:
@@ -651,7 +586,6 @@ def main():
     ############################################### LISTBOX LOCAL 
     # Access the Tkinter canvas through PySimpleGUI
     canvas_elem = window_search['-CANVAS-'].TKCanvas
-    # canvas = Canvas(canvas_elem, highlightthickness=0, bg='#64778d')
     canvas = Canvas(canvas_elem, height=394, highlightthickness=0, bg=BACKGROUND_COLOR)
     canvas.pack(fill='both', expand=False)
 
@@ -680,7 +614,6 @@ def main():
 
 
     files = find('*.txt', sings_dir)
-    # window_search.write_event_value('-LOCAL SONG LIST-', files)
     update_listbox(files)
 
 
@@ -690,7 +623,6 @@ def main():
     # Create an event loop
     while True:
         event, values = window_search.read()
-        # print(event)
         # End program if user closes window_search or
         # presses the OK button
         if event == "OK" or event == sg.WIN_CLOSED:
@@ -709,28 +641,3 @@ def main():
             writePath(values[event])
 
 main()
-
-# def clean_file(file_path):
-#     with open(file_path, 'r', encoding='utf-8') as f:
-#         lines = f.readlines()
-
-#     # Remove leading empty or space-only lines
-#     cleaned_lines = []
-#     found_text = False
-#     for line in lines:
-#         if not found_text:
-#             # Check if the line is either "" or only contains spaces
-#             if line.strip() != "":
-#                 found_text = True
-#                 cleaned_lines.append(line)  # Add the first non-empty line
-#         else:
-#             cleaned_lines.append(line)  # Add the rest of the lines
-
-#     # Write the cleaned content back to the file
-#     with open(file_path, 'w', encoding='utf-8') as f:
-#         f.writelines(cleaned_lines)
-
-# for title in find('*.txt', sings_dir):
-#     clean_file(f"{sings_dir}/{title.replace('/', '%2F').replace('?', '%3F')}.txt")
-
-# # clean_file(f"{sings_dir}/1er gaou.txt")
