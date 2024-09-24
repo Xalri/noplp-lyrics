@@ -440,8 +440,11 @@ def legendWindow():
         elif event == "-RETURN-":
            return popup.close()
 
-
+isPaused = False
+prev = 0
 def createLyricWindow(lyrics, title):
+    global isPaused
+    global prev
     musicPath = f"{getPath()}/{title}.mp3"
     fileExist = check_file_exists(musicPath)
     SplitLyrics = lyrics.split("\n")
@@ -489,11 +492,11 @@ def createLyricWindow(lyrics, title):
         mixer.music.set_volume(0.3)
     window_lyrics = sg.Window("Lyrics", lyrics_layout, size=(800,600), finalize=True, background_color=BACKGROUND_COLOR, icon=data_dir+"/logo.ico")
     update_lyrics_window(window_lyrics, chunkedLyrics, current_chunk_index, size)
-    isPaused = False
-    prev = 0
+    
+    offset = 0
     while True:
         event, values = window_lyrics.read(timeout=100)
-        currentTime = int(mixer.music.get_pos()/1000)
+        currentTime = int(mixer.music.get_pos()/1000) + offset
         
 
         
@@ -539,17 +542,23 @@ def createLyricWindow(lyrics, title):
             mixer.music.set_volume(volume)        
         elif event == "-TIME-":
             mixer.music.set_pos(values["-TIME-"])
-            prev = int(values["-TIME-"]) -1
-            currentTime = int(values["-TIME-"])
+            # currentTime = int(values["-TIME-"])
+            offset = int(values["-TIME-"]) - int(mixer.music.get_pos()/1000)
+            prev = currentTime - offset - 1
             print(int(values["-TIME-"]))
+            print(offset)
+            print("##")
         else:
             if prev == currentTime -1:
-                print("current time : " + str(currentTime))
-                print("prev time : " + str(prev))
+                print("current time : " + str(int(mixer.music.get_pos()/1000)))
+                print("offset time : " + str(offset))
+                print("final time : " + str(currentTime))
+                print("--")
                 prev = currentTime
                 window_lyrics["-TIME-"].update(value=currentTime)
             elif prev != currentTime:
                 prev = currentTime
+
 def main():
     default = getPath()
 
